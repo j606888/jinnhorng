@@ -73,21 +73,38 @@ const Navbar = () => {
       <div className="flex items-center gap-12">
         <div className="flex items-center gap-16">
           {items.map((item, index) => (
-            <a
-              href={item.link}
-              key={index}
-              className="relative flex items-center gap-1 group transition-colors duration-300"
-            >
-              <span className="absolute -left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <WaterDrop
-                  size={20}
-                  className="text-transparent group-hover:text-[#DA3947]"
-                />
-              </span>
-              <span className="text-sm font-medium text-[#30241E]/[0.72] group-hover:text-[#30241E]">
-                {item.name}
-              </span>
-            </a>
+            <div key={index} className="relative group">
+              <a
+                href={item.link}
+                className="relative flex items-center gap-1 transition-colors duration-300"
+              >
+                <span className="absolute -left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <WaterDrop
+                    size={16}
+                    className="text-transparent group-hover:text-[#DA3947]"
+                  />
+                </span>
+                <span className="text-sm font-medium text-[#30241E]/[0.72] group-hover:text-[#30241E]">
+                  {item.name}
+                </span>
+              </a>
+              
+              {item.children && (
+                <div className="absolute -left-4 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                  <div className="bg-white shadow-lg rounded-xl w-[184px] py-4 pr-10 pl-5 flex flex-col gap-4.5 ">
+                    {item.children.map((child, childIndex) => (
+                      <a
+                        key={childIndex}
+                        href={child.link}
+                        className="text-sm text-[#30241E]/[0.72] hover:text-[#30241E] transition-colors duration-200"
+                      >
+                        {child.name}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
           ))}
         </div>
         <div className="text-xs font-medium px-6 py-2 border border-[#30241E]/[0.72] text-[#30241E]/[0.72] rounded-sm">
