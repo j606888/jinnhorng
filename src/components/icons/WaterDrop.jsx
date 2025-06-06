@@ -1,10 +1,10 @@
 import React from 'react';
 
-const WaterDrop = ({ size = 12, className = '' }) => {
+const WaterDrop = ({ size = 20, className = '' }) => {
   return (
     <svg 
-      width={size} 
-      height={size * (20/12)} 
+      height={size} 
+      width={size}
       viewBox="0 0 12 20" 
       fill="none" 
       xmlns="http://www.w3.org/2000/svg"
