@@ -1,6 +1,6 @@
 import Stroke from "@/components/icons/Stroke";
 import Check from "@/components/icons/Check";
-import CTAButton from "@/components/CTAButton";
+import CtaButton from "@/components/CtaButton";
 
 const Quality = () => {
   return (
@@ -25,7 +25,7 @@ const Quality = () => {
         <QualityItem img="/images/quality-img-2.jpg" title="製程穩定控管" />
         <QualityItem img="/images/quality-img-3.jpg" title="品質認證把關" />
       </div>
-      <CTAButton>了解我們的製程與認證</CTAButton>
+      <CtaButton>了解我們的製程與認證</CtaButton>
     </section>
   );
 };

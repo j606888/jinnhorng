@@ -1,4 +1,4 @@
-import CTAButton from "@/components/CTAButton";
+import CtaButton from "@/components/CtaButton";
 
 const ContactUs = () => {
   return (
@@ -12,7 +12,7 @@ const ContactUs = () => {
         <p className="text-xl text-[#30241E] font-medium tracking-[0.8px]">
         需要穩定、安心的原物料供應？我們隨時在這裡。<br />聯絡我們，了解更多產品與合作細節。
         </p>
-        <CTAButton>聯絡我們，專人為您服務</CTAButton>
+        <CtaButton>聯絡我們，專人為您服務</CtaButton>
       </div>
     </section>
   );
