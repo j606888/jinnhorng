@@ -1,13 +1,13 @@
 import Stroke from "@/components/icons/Stroke";
 import WaterDrop from "@/components/icons/WaterDrop";
-import Pointer from "@/components/icons/Pointer";
+import ArrowLarge from "@/components/icons/ArrowLarge";
 
 const AboutUs = () => {
   return (
     <div className="py-20 flex justify-center">
       <div className="flex mx-auto">
         <div className="z-10 mt-[54px]">
-          <img src="/images/syrup-dripping.jpg" width={489} height={678} />
+          <img src="/images/syrup-dripping.jpg" width={488} height={680} className="rounded-xl shadow-[10px_10x_50px_0px_rgba(0,0,0,0.16)]" />
         </div>
         <div className="bg-[#F8F4EB] flex w-[672px] h-[785px] -ml-20 flex-col justify-between relative">
           <div className="mt-[104px] ml-[172px]">
@@ -23,7 +23,7 @@ const AboutUs = () => {
               <br />
               守護每一滴甜
             </h2>
-            <p className="text-base text-[rgba(48, 36, 30, 0.82)] mt-[76px] w-[408px] font-normal tracking-[0.65px]">
+            <p className="text-base text-[#30241E]/82 mt-[76px] w-[408px] font-normal tracking-[0.65px]">
               我們專注於果糖（高果糖糖漿）、麥芽糖與轉化液糖的製造，透過嚴謹的製程管理，結合品質控管與國際認證，產品穩定供應國內眾多知名飲料、果汁與冰品品牌，致力成為食品業值得信賴、安心選用的甜味原料夥伴。
             </p>
             <button className="flex items-center gap-2 bg-[#DA3947] text-white px-6 py-4 rounded-lg mt-[48px] ">
@@ -31,7 +31,7 @@ const AboutUs = () => {
               <span className="text-base font-bold  leading-[normal] tracking-[0.64px]、、">
                 了解我們的理念與初心
               </span>
-              <Pointer />
+              <ArrowLarge />
             </button>
           </div>
           <div className="top-[370px] left-[372px] absolute w-[385px] h-[1px] bg-[#000000]" />

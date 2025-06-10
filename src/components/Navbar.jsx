@@ -104,10 +104,7 @@ const Navbar = () => {
                 className="relative flex items-center gap-1 transition-colors duration-300"
               >
                 <span className="absolute -left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <WaterDrop
-                    size={16}
-                    className="text-transparent group-hover:text-[#DA3947]"
-                  />
+                  <WaterDrop size={16} color="#DA3947" />
                 </span>
                 <span className="text-sm font-medium text-[#30241E]/[0.72] group-hover:text-[#30241E] group-hover:font-medium">
                   {item.name}
@@ -137,7 +134,7 @@ const Navbar = () => {
             </div>
           ))}
         </div>
-        <div className="text-xs font-medium px-6 py-2 border border-[#30241E]/[0.72] text-[#30241E]/[0.72] rounded-sm">
+        <div className="cursor-pointer text-xs font-medium px-6 py-2 border border-[#30241E]/[0.72] text-[#30241E]/[0.72] rounded-sm">
           聯絡我們
         </div>
       </div>
