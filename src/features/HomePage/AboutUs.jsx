@@ -6,7 +6,7 @@ const AboutUs = () => {
     <div className="py-20 flex justify-center">
       <div className="flex mx-auto">
         <div className="z-10 mt-[54px]">
-          <img src="/images/syrup-dripping.jpg" width={488} height={680} className="rounded-xl shadow-[10px_10x_50px_0px_rgba(0,0,0,0.16)]" />
+          <img src="/images/syrup-dripping.png" width={488} height={680} className="rounded-xl shadow-[10px_10x_50px_0px_rgba(0,0,0,0.16)]" />
         </div>
         <div className="bg-[#F8F4EB] flex w-[672px] h-[785px] -ml-20 flex-col justify-between relative">
           <div className="mt-[104px] ml-[172px]">
