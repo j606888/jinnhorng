@@ -1,6 +1,5 @@
-import WaterDrop from "@/components/icons/WaterDrop";
 import ScrollMouse from "./ScrollMouse";
-import ArrowLarge from "@/components/icons/ArrowLarge";
+import CtaButton from "@/components/CtaButton";
 
 const Hero = () => {
   return (
@@ -12,13 +11,7 @@ const Hero = () => {
         <p className="text-2xl font-medium text-[#30241E]">
           不只是供應商，更是品質守門人
         </p>
-        <button className="flex items-center justify-center gap-2 bg-[#DA3947] text-white px-6 py-4 rounded-lg">
-          <WaterDrop size={20} />
-          <span className="text-base font-medium leading-[normal] tracking-[0.64px]">
-            探索產品系列
-          </span>
-          <ArrowLarge />
-        </button>
+        <CtaButton>探索產品系列</CtaButton>
       </div>
       <ScrollMouse />
       <div className="absolute top-[111px] left-1/2 -translate-x-1/2 w-[720px] h-[250px] rounded-[727px] bg-white/60 blur-[100px] z-1" />

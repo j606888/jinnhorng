@@ -134,7 +134,7 @@ const Navbar = () => {
             </div>
           ))}
         </div>
-        <div className="cursor-pointer text-xs font-medium px-6 py-2 border border-[#30241E]/[0.72] text-[#30241E]/[0.72] rounded-sm">
+        <div className="cursor-pointer text-xs font-medium px-6 py-2 border border-[#30241E]/[0.72] text-[#30241E]/[0.72] rounded-sm hover:bg-[#30241E] hover:text-white active:bg-[#403028]">
           聯絡我們
         </div>
       </div>

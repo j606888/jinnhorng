@@ -1,6 +1,5 @@
 import Stroke from "@/components/icons/Stroke";
-import WaterDrop from "@/components/icons/WaterDrop";
-import ArrowLarge from "@/components/icons/ArrowLarge";
+import CtaButton from "@/components/CtaButton";
 
 const AboutUs = () => {
   return (
@@ -23,16 +22,10 @@ const AboutUs = () => {
               <br />
               守護每一滴甜
             </h2>
-            <p className="text-base text-[#30241E]/82 mt-[76px] w-[408px] font-normal tracking-[0.65px]">
+            <p className="text-base text-[#30241E]/82 mt-[76px] w-[408px] font-normal tracking-[0.65px] mb-8">
               我們專注於果糖（高果糖糖漿）、麥芽糖與轉化液糖的製造，透過嚴謹的製程管理，結合品質控管與國際認證，產品穩定供應國內眾多知名飲料、果汁與冰品品牌，致力成為食品業值得信賴、安心選用的甜味原料夥伴。
             </p>
-            <button className="flex items-center gap-2 bg-[#DA3947] text-white px-6 py-4 rounded-lg mt-[48px] ">
-              <WaterDrop size={20} />
-              <span className="text-base font-bold  leading-[normal] tracking-[0.64px]、、">
-                了解我們的理念與初心
-              </span>
-              <ArrowLarge />
-            </button>
+            <CtaButton>了解我們的理念與初心</CtaButton>
           </div>
           <div className="top-[370px] left-[372px] absolute w-[385px] h-[1px] bg-[#000000]" />
           <div className="absolute top-0 right-0 w-[354px] h-[354px] overflow-hidden">
