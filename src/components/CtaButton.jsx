@@ -1,5 +1,5 @@
 import WaterDrop from "./icons/WaterDrop";
-import ArrowLarge from "./icons/ArrowLarge";
+import ArrowLight from "./icons/ArrowLight";
 
 const CtaButton = ({ children, onClick }) => {
   return (
@@ -11,7 +11,7 @@ const CtaButton = ({ children, onClick }) => {
       <span className="text-base font-bold  leading-[normal] tracking-[0.64px]、、">
         {children}
       </span>
-      <ArrowLarge />
+      <ArrowLight />
     </button>
   );
 };
