@@ -1,5 +1,7 @@
-import HomePageLegacy from "@/features/HomePageLegacy";
+'use client'
+
+import HomePage from "@/features/HomePage";
 
 export default function Home() {
-  return <HomePageLegacy />;
+  return <HomePage />;
 }

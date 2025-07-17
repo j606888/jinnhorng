@@ -1,8 +1,8 @@
 'use client'
 
-import Navbar from '@/components/Navbar';
+import Navbar from '@/components/NavbarLegacy';
 import Hero from './Hero';
-import LineUs from '@/components/LineUs';
+import LineUs from '@/features/HomePage/LineUs';
 import AboutUs from './AboutUs';
 import Product from './Product';
 import Quality from './Quality';
