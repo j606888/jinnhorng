@@ -44,7 +44,7 @@ const Quality = () => {
             />
             <div className="flex items-center gap-3 p-2">
               <RoundCheck />
-              <p className="text-white text-center tracking-[0.64px]">
+              <p className="text-white text-center font-bold tracking-[0.64px]">
                 {quality.description}
               </p>
             </div>

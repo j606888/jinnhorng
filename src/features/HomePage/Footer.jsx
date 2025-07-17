@@ -34,21 +34,21 @@ const Footer = () => {
         <div className="flex flex-wrap gap-y-6 w-full">
           {FOOTER_LINKS.map((link) => (
             <div key={link.title} className="w-[50%]">
-              <p className="text-white font-medium tracking-[0.64px]">{link.title}</p>
+              <p className="text-[#ffffff]/92 font-medium tracking-[0.64px]">{link.title}</p>
             </div>
           ))}
         </div>
         <div className="flex flex-col gap-2.5">
           <div className="flex gap-3">
-            <span className="w-[34px] flex-shrink-0 text-white font-medium tracking-[0.64px]">電話</span>
+            <span className="w-[34px] flex-shrink-0 text-[#ffffff]/92 font-medium tracking-[0.64px]">電話</span>
             <span className="text-[#ffffff]/60 font-medium">06-5701126</span>
           </div>
           <div className="flex gap-3">
-            <span className="w-[34px] flex-shrink-0 text-white font-medium tracking-[0.64px]">傳真</span>
+            <span className="w-[34px] flex-shrink-0 text-[#ffffff]/92 font-medium tracking-[0.64px]">傳真</span>
             <span className="text-[#ffffff]/60 font-medium">06-5700242</span>
           </div>
           <div className="flex gap-3">
-            <span className="w-[34px] flex-shrink-0 text-white font-medium tracking-[0.64px]">地址</span>
+            <span className="w-[34px] flex-shrink-0 text-[#ffffff]/92 font-medium tracking-[0.64px]">地址</span>
             <span className="text-[#ffffff]/60 font-medium">721013  台南市麻豆區麻口里柚安路二段420號</span>
           </div>
         </div>

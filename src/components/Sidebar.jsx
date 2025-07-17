@@ -90,9 +90,9 @@ const Sidebar = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, x: -100 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -100 }}
+            initial={{ opacity: 0, y: -100 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -100 }}
             transition={{ duration: 0.3 }}
             className="fixed top-0 left-0 w-full h-full bg-white z-60"
           >
@@ -105,9 +105,41 @@ const Sidebar = () => {
               </div>
               <X onClick={() => setIsOpen(false)} />
             </div>
-            <div className="flex flex-col">
-              {LINKS.map((link) => (
-                <div key={link.name} className="">
+            <motion.div 
+              className="flex flex-col"
+              initial="closed"
+              animate="open"
+              variants={{
+                open: {
+                  transition: { staggerChildren: 0.1, delayChildren: 0.2 }
+                },
+                closed: {
+                  transition: { staggerChildren: 0.05, staggerDirection: -1 }
+                }
+              }}
+            >
+              {LINKS.map((link, index) => (
+                <motion.div 
+                  key={link.name}
+                  variants={{
+                    open: {
+                      opacity: 1,
+                      y: 0,
+                      transition: {
+                        type: "spring",
+                        stiffness: 300,
+                        damping: 24
+                      }
+                    },
+                    closed: {
+                      opacity: 0,
+                      y: 20,
+                      transition: {
+                        duration: 0.2
+                      }
+                    }
+                  }}
+                >
                   {link.children ? (
                     <>
                       <div
@@ -148,9 +180,9 @@ const Sidebar = () => {
                       </Link>
                     </div>
                   )}
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>

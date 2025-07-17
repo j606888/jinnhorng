@@ -5,7 +5,7 @@ const LineUs = ({ className }) => {
   return (
     <div
       className={clsx(
-        "flex flex-col w-20 h-20 bg-[#DA3947] rounded-full items-center justify-center gap-1.5 transition-all duration-300",
+        "flex flex-col w-20 h-20 bg-[#DA3947] rounded-full items-center justify-center gap-1.5 transition-all duration-300 z-20",
         "hover:bg-[#E1616C] hover:cursor-pointer",
         "active:bg-[#C43340]",
         className
