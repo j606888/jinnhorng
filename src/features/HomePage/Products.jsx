@@ -144,7 +144,7 @@ const CircleButton = ({
     <div
       onClick={onClick}
       className={clsx(
-        "bg-white transition-all duration-300 cursor-pointer flex items-center justify-center rounded-[100px] w-[60px] h-[60px]",
+        "hidden bg-white transition-all duration-300 cursor-pointer md:flex items-center justify-center rounded-[100px] w-[60px] h-[60px] drop-shadow-[0px_8px_15.9px_rgba(0,0,0,0.12)]",
         "hover:bg-[#DA3947] hover:text-white",
         "active:bg-[#C43340]",
       )}

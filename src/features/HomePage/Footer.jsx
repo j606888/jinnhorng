@@ -25,20 +25,20 @@ const FOOTER_LINKS = [
 
 const Footer = () => {
   return (
-    <footer className="relative pt-10 pr-10 pb-[140px] pl-6 bg-[#2B2623]">
-      <div className="flex flex-col  gap-10">
-        <div className="flex gap-3 items-center">
+    <footer className="relative pt-10 pr-10 pb-[140px] pl-6 bg-[#2B2623] md:px-[20px] md:pb-30">
+      <div className="flex flex-col gap-10 md:items-center">
+        <div className="flex gap-3 items-center md:justify-center">
           <Logo  width={35} height={29} />
           <h4 className="text-white text-[22px] font-medium tracking-[4px]">晉弘實業股份有限公司</h4>
         </div>
-        <div className="flex flex-wrap gap-y-6 w-full">
+        <div className="flex flex-wrap gap-y-6 w-full md:flex-nowrap md:gap-10 md:justify-center">
           {FOOTER_LINKS.map((link) => (
-            <div key={link.title} className="w-[50%]">
-              <p className="text-[#ffffff]/92 font-medium tracking-[0.64px]">{link.title}</p>
+            <div key={link.title} className="w-[50%] md:w-auto">
+              <p className="text-[#ffffff]/92 font-medium tracking-[0.64px] md:text-sm">{link.title}</p>
             </div>
           ))}
         </div>
-        <div className="flex flex-col gap-2.5">
+        <div className="flex flex-col gap-2.5 md:w-[450px] md:text-sm">
           <div className="flex gap-3">
             <span className="w-[34px] flex-shrink-0 text-[#ffffff]/92 font-medium tracking-[0.64px]">電話</span>
             <span className="text-[#ffffff]/60 font-medium">06-5701126</span>
