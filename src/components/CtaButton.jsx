@@ -1,10 +1,14 @@
 import WaterDrop from "./icons/WaterDrop";
 import ArrowLight from "./icons/ArrowLight";
+import clsx from "clsx";
 
-const CtaButton = ({ children, onClick }) => {
+const CtaButton = ({ children, onClick, className }) => {
   return (
     <button
-      className="cursor-pointer flex items-center gap-2 bg-[#DA3947] text-white px-6 py-4 rounded-lg hover:bg-[#E1616C] active:bg-[#C43340]"
+      className={clsx(
+        "cursor-pointer flex items-center gap-2 bg-[#DA3947] text-white px-6 py-4 rounded-lg hover:bg-[#E1616C] active:bg-[#C43340]",
+        className
+      )}
       onClick={onClick}
     >
       <WaterDrop size={20} />

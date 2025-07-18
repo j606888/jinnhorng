@@ -1,61 +1,58 @@
 import Stroke from "@/components/icons/Stroke";
-import Check from "@/components/icons/Check";
+import RoundCheck from "@/components/icons/RoundCheck";
 import CtaButton from "@/components/CtaButton";
-import { motion } from "motion/react";
 
+const QUALITIES = [
+  {
+    description: "非基改原料",
+    image: "/images/homepage/quality-img-1.jpg",
+  },
+  {
+    description: "製程穩定控管",
+    image: "/images/homepage/quality-img-2.jpg",
+  },
+  {
+    description: "品質認證把關",
+    image: "/images/homepage/quality-img-3.jpg",
+  },
+];
 const Quality = () => {
   return (
-    <section className='relative bg-[url("/images/quality-bg.jpg")] bg-cover bg-center min-h-[800px] py-[96px] flex flex-col items-center overflow-hidden'>
-      <motion.div
-        initial={{ opacity: 0, y: 100 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-        viewport={{ once: true }}
-        className="flex flex-col items-center"
-      >
-        <h3 className="text-xl font-semibold tracking-[1.2px] text-white">
+    <section className="px-5 py-15 bg-[#2F2B26] bg-[url('/images/homepage/spoon_bg_mobile.jpg')] bg-contain bg-no-repeat md:px-10 md:py-24 md:bg-[url('/images/homepage/spoon_bg_desktop.jpg')] md:bg-cover md:bg-center lg:px-15">
+      <div className="mb-14 flex flex-col items-center text-center md:px-[34px] md:mb-20">
+        <h3 className="text-white font-semibold tracking-[0.96px] mb-1 md:text-xl">
           QUALITY COMMITMENT
         </h3>
-        <p className="text-2xl font-bold tracking-[4.8px] mt-1 text-white">
+        <h3 className="text-white text-xl font-bold tracking-[4px] md:text-2xl md:tracking-[4.8px]">
           品質守護
-        </p>
-        <Stroke />
-        <h2 className="text-5xl text-white mt-1.5 mb-5 font-bold tracking-[3.84px] leading-[normal]">
+        </h3>
+        <Stroke className="md:w-[120px] md:h-[24px]" />
+        <h2 className="text-white text-4xl font-bold tracking-[2.88px] leading-[1.5] mb-3 md:text-[40px] md:tracking-[3.2px] md:mb-5 lg:text-[48px] lg:tracking-[3.8px]">
           專業製程，成就值得信賴的品質
         </h2>
-        <p className="text-xl text-white text-center tracking-[0.8px] mb-20">
-          我們層層把關每一環節，搭配專業製糖工序與實驗室級品質控管，只為
-          <br />
-          提供穩定、安心的甜味原料。
+        <p className="text-white text-center tracking-[0.64px] lg:text-[20px] lg:font-medium lg:tracking-[0.8px] lg:w-[664px]">
+          我們層層把關每一環節，搭配專業製糖工序與實驗室級品質控管，只為提供穩定、安心的甜味原料。
         </p>
-        <div className="flex gap-6 items-center mb-20">
-          <QualityItem img="/images/quality-img-1.jpg" title="非基改原料" />
-          <QualityItem img="/images/quality-img-2.jpg" title="製程穩定控管" />
-          <QualityItem img="/images/quality-img-3.jpg" title="品質認證把關" />
-        </div>
-        <CtaButton>了解我們的製程與認證</CtaButton>
-      </motion.div>
+      </div>
+      <div className="flex flex-col items-center justify-center gap-10 mb-14 md:flex-row md:gap-4 md:mb-20 lg:gap-5 xl:gap-6">
+        {QUALITIES.map((quality) => (
+          <div key={quality.description} className="flex flex-col items-center">
+            <img
+              src={quality.image}
+              alt={quality.description}
+              className="mb-4 rounded-[10px] max-w-[344px] md:w-full"
+            />
+            <div className="flex items-center gap-3 p-2">
+              <RoundCheck />
+              <p className="text-white text-center font-bold tracking-[0.64px]">
+                {quality.description}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+      <CtaButton className="m-auto">了解我們的製程與認證</CtaButton>
     </section>
-  );
-};
-
-const QualityItem = ({ img, title }) => {
-  return (
-    <div className="flex flex-col gap-8 items-center">
-      <div className="w-[344px] h-[254px] rounded-[10px] overflow-hidden">
-        <img
-          src={img}
-          alt="quality-1"
-          className="w-[344px] h-[254px] rounded-[10px] transition-transform duration-600 hover:scale-105"
-        />
-      </div>
-      <div className="flex gap-3 items-center">
-        <Check />
-        <span className="text-white text-2xl font-medium tracking-[0.96px]">
-          {title}
-        </span>
-      </div>
-    </div>
   );
 };
 

@@ -1,27 +1,27 @@
-'use client'
+import Navbar from "@/components/Navbar";
+import Hero from "./Hero";
+import LineUs from '@/features/HomePage/LineUs';
+import AboutUs from "./AboutUs";
+import Products from "./Products";
+import Quality from "./Quality";
+import ContactUs from "./ContactUs";
+import Footer from "./Footer";
 
-import Navbar from '@/components/Navbar';
-import Hero from './Hero';
-import LineUs from '@/components/LineUs';
-import AboutUs from './AboutUs';
-import Product from './Product';
-import Quality from './Quality';
-import ContactUs from './ContactUs';
-import Footer from './Footer';
-
-export default function HomePage() {
+const HomePage = () => {
   return (
-    <div className='relative'>
+    <>
       <Navbar />
       <Hero />
       <AboutUs />
-      <Product />
+      <Products />
       <Quality />
       <ContactUs />
       <Footer />
-      <div className='fixed bottom-10 right-15'>
+      <div className='fixed bottom-5 right-5 z-20'>
         <LineUs />
       </div>
-    </div>
+    </>
   );
-}
+};
+
+export default HomePage;

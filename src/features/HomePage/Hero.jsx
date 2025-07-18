@@ -1,28 +1,21 @@
-import ScrollMouse from "./ScrollMouse";
 import CtaButton from "@/components/CtaButton";
-import { motion } from "motion/react";
 
 const Hero = () => {
   return (
-    <section className='bg-[url("/images/hero.png")] bg-cover bg-center min-h-[800px] w-full relative flex '>
-      <motion.div
-        initial={{ opacity: 0, y: 100 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true }}
-        className="mx-auto mt-45 flex flex-col gap-6 items-center z-2"
-      >
-        <h1 className="text-[56px] font-medium tracking-[4.48px] leading-[56px] text-[#30241E]">
-          專業製糖 用心為您
+    <section className="relative w-full bg-cover bg-center bg-[url('/images/homepage/hero_mobile.jpg')] h-[667px] md:bg-[url('/images/homepage/hero_tablet.jpg')] md:h-[1024px] lg:bg-[url('/images/homepage/hero_desktop.jpg')] lg:h-[768px] xl:h-[800px] overflow-hidden">
+      <div className="relative flex flex-col gap-5 items-center justify-center pt-[96px] text-[#30241E] z-10 md:gap-[28px] md:pt-[304px] lg:pt-[176px]">
+        <h1 className="text-5xl font-medium tracking-[3.84px] leading-[1.5]">
+          專業製糖
+          <br className="block md:hidden" />
+          <span className="hidden md:inline"> </span>
+          用心為您
         </h1>
-        <p className="text-2xl font-medium text-[#30241E]">
+        <p className="text-xl font-medium tracking-[0.8px]">
           不只是供應商，更是品質守門人
         </p>
-        <CtaButton>探索產品系列</CtaButton>
-      </motion.div>
-      <ScrollMouse />
-      <div className="absolute top-[111px] left-1/2 -translate-x-1/2 w-[720px] h-[250px] rounded-[727px] bg-white/60 blur-[100px] z-1" />
-      <div className="absolute bottom-0 w-full h-[98px] bg-[linear-gradient(180deg,rgba(0,0,0,0.00)_0%,rgba(0,0,0,0.30)_100%)]" />
+        <CtaButton>探索糖漿系列</CtaButton>
+      </div>
+      <div className="absolute top-[28px] left-1/2 -translate-x-1/2 w-[410px] h-[316px] rounded-[410px] blur-[126px] bg-white z-1 md:top-[250px] md:w-[650px] md:h-[236px] md:rounded-[650px] lg:w-[670px] lg:blur-[96px] lg:top-[106px] lg:bg-[#ffffff]/[0.6]" />
     </section>
   );
 };
