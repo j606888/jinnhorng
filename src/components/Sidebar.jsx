@@ -183,6 +183,9 @@ const Sidebar = () => {
                 </motion.div>
               ))}
             </motion.div>
+            <div className="absolute bottom-0 left-0 w-full p-6">
+              <p className="text-[#30241E]/[0.82] text-xs font-medium tracking-[0.4px] text-center">COPYRIGHT © JINN HORNG CHEMICAL INDUSTRIAL CO., LTD.</p>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

@@ -5,14 +5,14 @@ const LineUs = ({ className }) => {
   return (
     <div
       className={clsx(
-        "flex flex-col w-20 h-20 bg-[#DA3947] rounded-full items-center justify-center gap-1.5 transition-all duration-300 z-20",
+        "flex flex-col w-20 h-20 bg-[#DA3947] rounded-full items-center justify-center gap-1.5 transition-all duration-300 z-20 md:w-25 md:h-25",
         "hover:bg-[#E1616C] hover:cursor-pointer",
         "active:bg-[#C43340]",
         className
       )}
     >
-      <LineLogo className="w-10 h-10" />
-      {/* <span className="text-white text-xs font-medium">立即洽談</span> */}
+      <LineLogo className="w-10 h-10 md:w-8 md:h-8" />
+      <span className="hidden text-white text-xs font-medium md:block">立即洽談</span>
     </div>
   );
 };
