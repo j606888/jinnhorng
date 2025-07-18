@@ -1,4 +1,4 @@
-const X = ({ onClick = () => {} }) => {
+const X = ({ onClick = () => {}, className = "" }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -7,6 +7,7 @@ const X = ({ onClick = () => {} }) => {
       viewBox="0 0 32 32"
       fill="none"
       onClick={onClick}
+      className={className}
     >
       <g clipPath="url(#clip0_2712_1103)">
         <path

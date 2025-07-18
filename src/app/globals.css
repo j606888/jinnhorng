@@ -6,7 +6,8 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --breakpoint-xl: 90rem;
+  --breakpoint-xl: 87rem;
+  /* --breakpoint-xl: 90rem; */
 }
 
 @theme inline {

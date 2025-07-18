@@ -21,7 +21,7 @@ const Navbar = () => {
 
   return (
     <div className={clsx(
-      "fixed top-0 left-0 right-0 z-50 flex px-5 py-[14px] justify-between items-center bg-transparent",
+      "fixed top-0 left-0 right-0 z-50 flex px-5 py-[14px] justify-between items-center bg-transparent md:px-10",
       isScolled
         ? "bg-white shadow-[0px_4px_10px_0px_rgba(0,0,0,0.16)]"
         : "bg-transparent"
