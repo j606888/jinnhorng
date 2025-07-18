@@ -26,7 +26,7 @@ const Quality = () => {
         <h3 className="text-white text-xl font-bold tracking-[4px] md:text-2xl md:tracking-[4.8px]">
           品質守護
         </h3>
-        <Stroke className="md:w-[134px] md:h-[27px] lg:w-[120px] lg:h-[24px]" />
+        <Stroke className="md:w-[120px] md:h-[24px]" />
         <h2 className="text-white text-4xl font-bold tracking-[2.88px] leading-[1.5] mb-3 md:text-[40px] md:tracking-[3.2px] md:mb-5 lg:text-[48px] lg:tracking-[3.8px]">
           專業製程，成就值得信賴的品質
         </h2>
@@ -34,13 +34,13 @@ const Quality = () => {
           我們層層把關每一環節，搭配專業製糖工序與實驗室級品質控管，只為提供穩定、安心的甜味原料。
         </p>
       </div>
-      <div className="flex flex-col items-center gap-10 mb-14 md:flex-row md:gap-4 md:mb-20 lg:gap-5">
+      <div className="flex flex-col items-center justify-center gap-10 mb-14 md:flex-row md:gap-4 md:mb-20 lg:gap-5 xl:gap-6">
         {QUALITIES.map((quality) => (
           <div key={quality.description} className="flex flex-col items-center">
             <img
               src={quality.image}
               alt={quality.description}
-              className="mb-4 rounded-[10px] max-w-[420px] md:w-full"
+              className="mb-4 rounded-[10px] max-w-[344px] md:w-full"
             />
             <div className="flex items-center gap-3 p-2">
               <RoundCheck />

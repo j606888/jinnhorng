@@ -26,7 +26,7 @@ const FOOTER_LINKS = [
 const Footer = () => {
   return (
     <footer className="relative pt-10 pr-10 pb-[140px] pl-6 bg-[#2B2623] md:px-[20px] md:pb-30 lg:px-15 lg:py-18">
-      <div className="flex flex-col gap-10 md:items-center lg:flex-row lg:items-start lg:gap-0">
+      <div className="relative flex flex-col gap-10 max-w-[1080px] mx-auto md:items-center lg:flex-row lg:items-start lg:gap-0">
         <div className="flex gap-3 items-center md:justify-center lg:flex-col lg:items-start lg:w-[289px] lg:flex-shrink-0 lg:gap-[15px] lg:mr-auto">
           <Logo className="w-[35px] h-[29px] lg:w-[52px] lg:h-[42px]" />
           <h4 className="text-white text-[22px] font-medium tracking-[4px] lg:text-[20px] lg:tracking-[0.8px]">晉弘實業股份有限公司</h4>
@@ -52,8 +52,11 @@ const Footer = () => {
             <span className="text-[#ffffff]/60 font-medium">721013  台南市麻豆區麻口里柚安路二段420號</span>
           </div>
         </div>
+        <div className="hidden lg:block absolute bottom-0 left-0 w-[288px] ">
+          <p className="text-[#ffffff]/50 text-xs tracking-[0.48px] text-center lg:text-start">COPYRIGHT © JINN HORNG CHEMICAL INDUSTRIAL CO., LTD.</p>
+        </div>
       </div>
-      <div className="absolute bottom-0 left-0 w-full p-6 lg:w-[288px] lg:left-[60px] lg:bottom-[72px] lg:p-0 ">
+      <div className="absolute bottom-0 left-0 w-full p-6 lg:w-[288px] lg:left-[60px] lg:bottom-[72px] lg:p-0 lg:hidden">
         <p className="text-[#ffffff]/50 text-xs tracking-[0.48px] text-center lg:text-start">COPYRIGHT © JINN HORNG CHEMICAL INDUSTRIAL CO., LTD.</p>
       </div>
     </footer>

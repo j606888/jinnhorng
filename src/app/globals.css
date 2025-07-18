@@ -6,8 +6,8 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --breakpoint-xl: 87rem;
-  /* --breakpoint-xl: 90rem; */
+  --font-ar: 'AR One Sans', sans-serif;
+  --font-noto: 'Noto Sans TC', Arial, Helvetica, sans-serif;
 }
 
 @theme inline {
@@ -51,16 +51,8 @@
 }
 
 html, body {
-  font-family: 'AR One Sans', Arial, Helvetica, sans-serif;
-}
-
-html, body :lang(zh-TW) {
   font-family: 'Noto Sans TC', 'AR One Sans', Arial, Helvetica, sans-serif;
 }
-/* 
-html, body {
-  font-family: 'Noto Sans TC', 'AR One Sans', Arial, Helvetica, sans-serif;
-} */
 
 :root {
   --radius: 0.625rem;

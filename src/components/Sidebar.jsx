@@ -6,75 +6,7 @@ import { AnimatePresence, motion } from "motion/react";
 import Link from "next/link";
 import ArrowUp from "./icons/ArrowUp";
 import ArrowDown from "./icons/ArrowDown";
-
-const LINKS = [
-  {
-    name: "關於我們",
-    link: "/about",
-  },
-  {
-    name: "產品系列",
-    children: [
-      {
-        name: "所有產品",
-        link: "/products",
-      },
-      {
-        name: "果糖（高果糖糖漿）",
-        link: "/products/fructose",
-      },
-      {
-        name: "轉化液糖",
-        link: "/products/conversion-liquid-sugar",
-      },
-      {
-        name: "麥芽糖漿",
-        link: "/products/maltose-syrup",
-      },
-      {
-        name: "龍眼風味糖漿",
-        link: "/products/longan-flavor-syrup",
-      },
-      {
-        name: "特級結晶葡萄糖",
-        link: "/products/super-crystalline-glucose",
-      },
-    ],
-  },
-  {
-    name: "物流服務",
-    link: "/logistics",
-  },
-  {
-    name: "品質守護",
-    children: [
-      {
-        name: "品質控管",
-        link: "/quality",
-      },
-      {
-        name: "製程流程",
-        link: "/quality",
-      },
-      {
-        name: "證書與標章",
-        link: "/quality",
-      },
-      {
-        name: "檢測報告",
-        link: "/quality",
-      },
-    ],
-  },
-  {
-    name: "常見問題",
-    link: "/faq",
-  },
-  {
-    name: "聯絡我們",
-    link: "/contact",
-  },
-];
+import { LINKS } from "./Navbar";
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -104,9 +36,9 @@ const Sidebar = () => {
   return (
     <>
       {isOpen ? (
-        <X onClick={() => setIsOpen(false)} className="cursor-pointer" />
+        <X onClick={() => setIsOpen(false)} className="cursor-pointer xl:hidden" />
       ) : (
-        <Menu onClick={() => setIsOpen(true)} className="cursor-pointer" />
+        <Menu onClick={() => setIsOpen(true)} className="cursor-pointer xl:hidden" />
       )}
 
       <AnimatePresence>
