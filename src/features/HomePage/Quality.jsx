@@ -1,6 +1,7 @@
 import Stroke from "@/components/icons/Stroke";
 import RoundCheck from "@/components/icons/RoundCheck";
 import CtaButton from "@/components/CtaButton";
+import { motion } from "motion/react";
 
 const QUALITIES = [
   {
@@ -19,7 +20,13 @@ const QUALITIES = [
 const Quality = () => {
   return (
     <section className="px-5 py-15 bg-[#2F2B26] bg-[url('/images/homepage/spoon_bg_mobile.jpg')] bg-contain bg-no-repeat md:px-10 md:py-24 md:bg-[url('/images/homepage/spoon_bg_desktop.jpg')] md:bg-cover md:bg-center lg:px-15">
-      <div className="mb-14 flex flex-col items-center text-center md:px-[34px] md:mb-20">
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+        viewport={{ once: true }}
+        className="mb-14 flex flex-col items-center text-center md:px-[34px] md:mb-20"
+      >
         <h3 className="text-white font-semibold tracking-[0.96px] mb-1 md:text-xl">
           QUALITY COMMITMENT
         </h3>
@@ -33,15 +40,17 @@ const Quality = () => {
         <p className="text-white text-center tracking-[0.64px] lg:text-[20px] lg:font-medium lg:tracking-[0.8px] lg:w-[664px]">
           我們層層把關每一環節，搭配專業製糖工序與實驗室級品質控管，只為提供穩定、安心的甜味原料。
         </p>
-      </div>
+      </motion.div>
       <div className="flex flex-col items-center justify-center gap-10 mb-14 md:flex-row md:gap-4 md:mb-20 lg:gap-5 xl:gap-6">
         {QUALITIES.map((quality) => (
           <div key={quality.description} className="flex flex-col items-center">
-            <img
-              src={quality.image}
-              alt={quality.description}
-              className="mb-4 rounded-[10px] max-w-[344px] md:w-full"
-            />
+            <div className="mb-4 w-full rounded-[10px] max-w-[344px] md:w-full overflow-hidden">
+              <img
+                src={quality.image}
+                alt={quality.description}
+                className="w-full h-full object-cover transition-transform duration-1000 hover:scale-102"
+              />
+            </div>
             <div className="flex items-center gap-3 p-2">
               <RoundCheck />
               <p className="text-white text-center font-bold tracking-[0.64px]">

@@ -7,6 +7,7 @@ import Link from "next/link";
 import ArrowUp from "./icons/ArrowUp";
 import ArrowDown from "./icons/ArrowDown";
 import { LINKS } from "./Navbar";
+import WaterDrop from "@/components/icons/WaterDrop";
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,20 +26,26 @@ const Sidebar = () => {
     };
 
     if (isOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener("mousedown", handleClickOutside);
     }
 
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [isOpen]);
 
   return (
     <>
       {isOpen ? (
-        <X onClick={() => setIsOpen(false)} className="cursor-pointer xl:hidden" />
+        <X
+          onClick={() => setIsOpen(false)}
+          className="cursor-pointer xl:hidden"
+        />
       ) : (
-        <Menu onClick={() => setIsOpen(true)} className="cursor-pointer xl:hidden" />
+        <Menu
+          onClick={() => setIsOpen(true)}
+          className="cursor-pointer xl:hidden"
+        />
       )}
 
       <AnimatePresence>
@@ -49,7 +56,7 @@ const Sidebar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -100 }}
             transition={{ duration: 0.3 }}
-            className="fixed top-0 left-0 w-full h-full bg-white z-60 lg:h-auto lg:top-[66px] lg:right-4 lg:left-auto lg:py-3 lg:w-[375px] lg:rounded-[10px] lg:shadow-[0px_4px_10px_0px_rgba(0,0,0,0.16)]"
+            className="fixed top-0 left-0 w-full h-full bg-white z-60 lg:h-auto lg:top-[66px] lg:right-4 lg:left-auto lg:py-3 lg:w-[375px] lg:rounded-[10px] lg:shadow-[0px_4px_10px_0px_rgba(0,0,0,0.16)] flex flex-col"
           >
             <div className="flex justify-between items-center px-6 py-[14px] lg:hidden">
               <div className="flex items-center gap-2.5 ">
@@ -98,11 +105,16 @@ const Sidebar = () => {
                   {link.children ? (
                     <>
                       <div
-                        className="text-[#30241E] text-base font-medium tracking-[0.64px] flex items-center justify-between py-[18px] pl-[50px] pr-[24px] cursor-pointer"
+                        className="text-[#30241E] text-base font-medium tracking-[0.64px] flex items-center justify-between py-[18px] pl-[50px] pr-[24px] cursor-pointer group"
                         onClick={() => toggleExpand(link.name)}
                       >
-                        <span>{link.name}</span>
-                        {expanded === link.name ? <ArrowUp /> : <ArrowDown />}
+                        <div className="flex items-center justify-between w-full relative group">
+                          <span className="absolute -left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <WaterDrop size={16} color="#DA3947" />
+                          </span>
+                          <span>{link.name}</span>
+                          {expanded === link.name ? <ArrowUp /> : <ArrowDown />}
+                        </div>
                       </div>
                       <AnimatePresence initial={false}>
                         {expanded === link.name && (
@@ -117,9 +129,9 @@ const Sidebar = () => {
                               <Link
                                 key={child.name}
                                 href={child.link}
-                                className="text-[#30241E]/[0.72] text-[15px] font-medium tracking-[0.64px] py-3 pl-[64px] cursor-pointer"
+                                className="text-[#30241E]/[0.72] text-[15px] font-medium tracking-[0.64px] py-3 pl-[64px] cursor-pointer hover:text-[#30241E] transition-colors duration-200 group"
                               >
-                                {child.name}
+                                <span>{child.name}</span>
                               </Link>
                             ))}
                           </motion.div>
@@ -132,14 +144,19 @@ const Sidebar = () => {
                         href={link.link}
                         className="text-[#30241E] text-base font-medium tracking-[0.64px] cursor-pointer"
                       >
-                        {link.name}
+                        <div className="flex items-center relative group">
+                          <span className="absolute -left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <WaterDrop size={16} color="#DA3947" />
+                          </span>
+                          <span>{link.name}</span>
+                        </div>
                       </Link>
                     </div>
                   )}
                 </motion.div>
               ))}
             </motion.div>
-            <div className="absolute bottom-0 left-0 w-full p-6 lg:hidden">
+            <div className="mt-auto w-full p-6 lg:hidden">
               <p className="text-[#30241E]/[0.82] text-xs font-medium tracking-[0.4px] text-center">
                 COPYRIGHT © JINN HORNG CHEMICAL INDUSTRIAL CO., LTD.
               </p>

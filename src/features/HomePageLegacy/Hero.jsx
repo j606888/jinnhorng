@@ -1,4 +1,4 @@
-import ScrollMouse from "./ScrollMouse";
+import ScrollMouse from "../HomePage/ScrollMouse";
 import CtaButton from "@/components/CtaButton";
 import { motion } from "motion/react";
 

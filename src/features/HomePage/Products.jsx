@@ -4,6 +4,7 @@ import CtaButton from "@/components/CtaButton";
 import { useState, useEffect } from "react";
 import ArrowLarge from "@/components/icons/ArrowLarge";
 import { clsx } from "clsx";
+import { motion } from "motion/react";
 
 const PRODUCTS = [
   {
@@ -36,6 +37,7 @@ const PRODUCTS = [
 const Products = () => {
   const [index, setIndex] = useState(1);
   const [isTransitioning, setIsTransitioning] = useState(true);
+  const [isHovered, setIsHovered] = useState(false);
 
   const extendedProducts = [
     PRODUCTS[PRODUCTS.length - 2],
@@ -100,7 +102,13 @@ const Products = () => {
 
   return (
     <section className="py-15 bg-[#F7F3F2] relative overflow-hidden md:py-24 ">
-      <div className="mb-14 px-5 flex flex-col items-center xl:mb-20">
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="mb-14 px-5 flex flex-col items-center xl:mb-20"
+      >
         <h3 className="text-[#604C2B]/50 font-semibold tracking-[0.96px] mb-1 md:text-xl">
           PRODUCT
         </h3>
@@ -117,7 +125,7 @@ const Products = () => {
           <br className="hidden md:block" />
           適用於各式食品、飲品與甜點，是您可以安心選擇的甜味原料。
         </p>
-      </div>
+      </motion.div>
       <div className="flex flex-col items-center px-[37.5px] gap-4 mb-14 z-2 relative md:flex-row lg:justify-center lg:gap-[18px] xl:gap-14 xl:mb-20">
         <div className="flex flex-col md:hidden gap-4">
           {PRODUCTS.map((product) => (
@@ -136,7 +144,7 @@ const Products = () => {
             style={{ transform: `translateX(-${translateX}px)` }}
           >
             {extendedProducts.map((product, idx) => (
-              <ProductCard key={`${product.name}-${idx}`} {...product} />
+              <ProductCard key={`${product.name}-${idx}`} {...product} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} />
             ))}
           </div>
         </div>
@@ -149,12 +157,12 @@ const Products = () => {
       <img
         src="/images/homepage/sugar_bottle.png"
         alt="sugar-bottle"
-        className={`absolute w-[146px] top-[34px] -left-[39px]`}
+        className={`absolute w-[146px] top-[34px] -left-[39px] md:w-[237px] md:-left-[68px] md:top-[94px] lg:w-[237px] lg:-left-[68px] lg:top-[94px] xl:w-[315px] xl:-left-[64px] xl:top-[60px] transition-transform duration-1000 ${isHovered ? '-translate-y-2' : ''}`}
       />
       <img
         src="/images/homepage/sugar_bowl.png"
         alt="sugar-bottle"
-        className={`absolute w-[146px] top-[319px] -right-[53px]`}
+        className={`absolute w-[146px] top-[319px] -right-[53px] md:w-[250px] md:top-[378px] md:-right-[79px] lg:w-[315px] lg:-right-[100px] lg:top-[152px] xl:w-[315px] xl:-right-[100px] xl:top-[152px] transition-transform duration-1000 ${isHovered ? '-translate-y-2' : ''}`}
       />
     </section>
   );
