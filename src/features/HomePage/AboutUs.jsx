@@ -9,7 +9,7 @@ const AboutUs = () => {
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.7, delay: 0.3 }}
           viewport={{ once: true }}
           className="flex flex-col items-center lg:items-start relative w-full"
         >

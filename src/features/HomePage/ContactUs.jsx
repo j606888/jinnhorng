@@ -8,7 +8,7 @@ const ContactUs = () => {
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7 }}
+        transition={{ duration: 0.7, delay: 0.3 }}
         viewport={{ once: true }}
         className="relative flex flex-col items-center gap-[32px] text-center lg:items-start max-w-[1080px] mx-auto z-1"
       >

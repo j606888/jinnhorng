@@ -105,7 +105,7 @@ const Products = () => {
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
+          transition={{ duration: 0.7, delay: 0.3 }}
           viewport={{ once: true }}
           className="mb-14 px-5 flex flex-col items-center xl:mb-20"
       >
