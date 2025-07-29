@@ -5,7 +5,7 @@ const ProductCard = ({ name, enName, image, onClick, onMouseEnter, onMouseLeave 
     onClick(name);
   };
   return (
-    <div className="flex flex-col items-center min-w-[252px] max-w-[300px] rounded-[10px] overflow-hidden shadow-[0px_10px_24px_0px_rgba(0,0,0,0.06)] xl:min-w-[300px] group cursor-pointer" onClick={handleClick} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+    <div className="flex flex-col items-center min-w-[252px] max-w-[300px] rounded-[10px] overflow-hidden shadow-[0px_10px_24px_0px_rgba(0,0,0,0.06)] xl:min-w-[300px] group cursor-pointer hover:shadow-[0px_10px_24px_0px_rgba(0,0,0,0.12)]" onClick={handleClick} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
       <div className="h-[300px] overflow-hidden">
         <img src={image} alt={name} className="h-full w-full object-cover group-hover:scale-102 transition-transform duration-1000" />
       </div>

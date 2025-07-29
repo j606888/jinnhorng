@@ -6,7 +6,7 @@ const FOOTER_LINKS = [
     link: '/about-us',
   },
   {
-    title: '糖漿系列',
+    title: '產品系列',
     link: '/products',
   },
   {

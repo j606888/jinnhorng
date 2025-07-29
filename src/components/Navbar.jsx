@@ -111,7 +111,7 @@ const Navbar = () => {
           link.children ? (
             <div
               key={link.name}
-              className="text-[#30241E]/[0.72] text-sm font-bold tracking-[0.56px] relative group hover:text-[#30241E] transition-colors duration-300"
+              className="text-[#30241E]/[0.72] text-sm font-bold tracking-[0.56px] relative group hover:text-[#30241E] transition-colors duration-300 flex items-center"
             >
               <span className="absolute -left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <WaterDrop size={16} color="#DA3947" />
@@ -128,7 +128,7 @@ const Navbar = () => {
                     <Link
                       key={child.name}
                       href={child.link}
-                      className="text-sm text-[#30241E]/[0.72] hover:text-[#30241E] hover:font-medium transition-colors duration-200"
+                      className="text-sm text-[#30241E]/[0.72] hover:text-[#30241E] font-medium transition-colors duration-200"
                     >
                       {child.name}
                     </Link>
@@ -140,7 +140,7 @@ const Navbar = () => {
             <Link
               key={link.name}
               href={link.link}
-              className="group relative text-[#30241E]/[0.72] text-sm font-bold tracking-[0.56px] hover:text-[#30241E] transition-colors duration-300"
+              className="group relative text-[#30241E]/[0.72] text-sm font-bold tracking-[0.56px] hover:text-[#30241E] transition-colors duration-300 flex items-center"
             >
               <span className="absolute -left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <WaterDrop size={16} color="#DA3947" />
@@ -151,7 +151,7 @@ const Navbar = () => {
         )}
         <Link
           href="/contact"
-          className="ml-[-14px] text-xs px-6 py-2 border-1 font-bold border-[#30241E]/[0.72] rounded-[4px] text-[#30241E]/[0.72] hover:text-[#30241E] transition-colors duration-200"
+          className="ml-[-14px] text-xs px-6 py-2 border-1 font-bold border-[#30241E]/[0.72] rounded-[4px] text-[#30241E]/[0.72] transition-colors duration-200 hover:bg-[#30241E] hover:text-white active:bg-[#403028]"
         >
           聯絡我們
         </Link>
