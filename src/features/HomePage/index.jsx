@@ -4,8 +4,8 @@ import LineUs from '@/features/HomePage/LineUs';
 import AboutUs from "./AboutUs";
 import Products from "./Products";
 import Quality from "./Quality";
-import ContactUs from "./ContactUs";
-import Footer from "./Footer";
+import ContactUs from "../shared/ContactUs";
+import Footer from "../shared/Footer";
 
 const HomePage = () => {
   return (

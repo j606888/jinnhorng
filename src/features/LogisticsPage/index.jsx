@@ -1,8 +1,9 @@
 import Navbar from "@/components/Navbar";
-import Footer from "../HomePage/Footer";
+import Footer from "../shared/Footer";
 import Hero from "./Hero";
 import Service from "./Service";
 import Advantage from "./Advantage";
+import ContactUs from "../shared/ContactUs";
 
 const LogisticsPage = () => {
   return <>
@@ -10,6 +11,7 @@ const LogisticsPage = () => {
     <Hero />
     <Service />
     <Advantage />
+    <ContactUs />
     <Footer />
   </>
 };

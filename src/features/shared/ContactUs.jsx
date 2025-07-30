@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 const ContactUs = () => {
   return (
     <section className="px-5 py-15 h-[882px] md:py-[203px] md:bg-[url('/images/contact_us_tablet.jpg')] md:px-10 md:h-[665px] lg:h-[667px] lg:px-15 lg:py-[180px] relative overflow-hidden">
-      <div className="absolute inset-0 bg-[url('/images/contact_us_mobile.jpg')] bg-cover bg-center bg-no-repeat h-[882px] md:bg-[url('/images/contact_us_tablet.jpg')] md:h-[815px] md:py-[203px] lg:bg-[url('/images/contact_us_desktop.jpg')] lg:h-[667px] lg:px-15 lg:py-[180px] transition-transform duration-1000 hover:scale-[1.02] z-0" />
+      <div className="absolute inset-0 bg-[url('/images/contact_us_mobile.jpg')] bg-cover bg-center bg-no-repeat h-[882px] md:bg-[url('/images/contact_us_tablet.jpg')] md:h-[815px] md:py-[203px] lg:bg-[url('/images/contact_us_desktop.jpg')] lg:h-[667px] lg:px-15 lg:py-[180px] z-0" />
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
