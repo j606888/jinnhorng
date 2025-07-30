@@ -1,4 +1,4 @@
-const Menu = ({ size = 32, className = "", onClick = () => {} }) => {
+const Menu = ({ size = 32, className = "", onClick = () => {}, color = "#30241E" }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -11,7 +11,7 @@ const Menu = ({ size = 32, className = "", onClick = () => {} }) => {
     >
       <path
         d="M19 24H6V22H19V24ZM26 17H6V15H26V17ZM26 10H6V8H26V10Z"
-        fill="#30241E"
+        fill={color}
       />
     </svg>
   );

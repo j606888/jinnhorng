@@ -157,12 +157,12 @@ const Products = () => {
       <img
         src="/images/homepage/sugar_bottle.png"
         alt="sugar-bottle"
-        className={`absolute w-[146px] top-[34px] -left-[39px] md:w-[237px] md:-left-[68px] md:top-[94px] lg:w-[237px] lg:-left-[68px] lg:top-[94px] xl:w-[315px] xl:-left-[64px] xl:top-[60px] transition-transform duration-1000 ${isHovered ? '-translate-y-2' : ''}`}
+        className={`absolute w-[146px] top-[34px] -left-[39px] md:w-[237px] md:-left-[68px] md:top-[94px] lg:w-[237px] lg:-left-[68px] lg:top-[94px] xl:w-[315px] xl:left-[0px] xl:top-[60px] transition-transform duration-1000 ${isHovered ? '-translate-y-2' : ''}`}
       />
       <img
         src="/images/homepage/sugar_bowl.png"
         alt="sugar-bottle"
-        className={`absolute w-[146px] top-[319px] -right-[53px] md:w-[250px] md:top-[378px] md:-right-[79px] lg:w-[315px] lg:-right-[100px] lg:top-[152px] xl:w-[315px] xl:-right-[100px] xl:top-[152px] transition-transform duration-1000 ${isHovered ? '-translate-y-2' : ''}`}
+        className={`absolute w-[146px] top-[319px] -right-[53px] md:w-[250px] md:top-[378px] md:-right-[79px] lg:w-[315px] lg:-right-[100px] lg:top-[152px] xl:w-[315px] xl:right-[0px] xl:top-[152px] transition-transform duration-1000 ${isHovered ? '-translate-y-2' : ''}`}
       />
     </section>
   );

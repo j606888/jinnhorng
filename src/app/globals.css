@@ -8,6 +8,7 @@
 @theme {
   --font-ar: 'AR One Sans', sans-serif;
   --font-noto: 'Noto Sans TC', Arial, Helvetica, sans-serif;
+  --color-deep-brown: #30241E;
 }
 
 @theme inline {

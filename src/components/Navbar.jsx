@@ -74,7 +74,7 @@ export const LINKS = [
   },
 ];
 
-const Navbar = () => {
+const Navbar = ({ white = false }) => {
   const [isScolled, setIsScolled] = useState(false);
 
   useEffect(() => {
@@ -99,22 +99,37 @@ const Navbar = () => {
           : "bg-transparent"
       )}
     >
-      <div className="flex items-center gap-2.5">
-        <Logo />
-        <h1 className="text-[#30241E] text-lg font-medium tracking-[3.24px]">
-          晉弘實業股份有限公司
-        </h1>
-      </div>
-      <Sidebar />
+      <Link href="/">
+        <div className="flex items-center gap-2.5">
+          <Logo color={white && !isScolled ? "#fff" : "#DA3947"} />
+          <h1
+            className={clsx(
+              "text-lg font-medium tracking-[3.24px]",
+              white && !isScolled ? "text-white" : "text-[#30241E]"
+            )}
+          >
+            晉弘實業股份有限公司
+          </h1>
+        </div>
+      </Link>
+      <Sidebar white={white && !isScolled} />
       <div className="hidden xl:flex gap-16 items-center">
         {LINKS.slice(0, 5).map((link) =>
           link.children ? (
             <div
               key={link.name}
-              className="text-[#30241E]/[0.72] text-sm font-bold tracking-[0.56px] relative group hover:text-[#30241E] transition-colors duration-300"
+              className={clsx(
+                "text-sm font-bold tracking-[0.56px] relative group  transition-colors duration-300 flex items-center",
+                white && !isScolled
+                  ? "text-white"
+                  : "text-[#30241E]/[0.72] hover:text-[#30241E]"
+              )}
             >
               <span className="absolute -left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <WaterDrop size={16} color="#DA3947" />
+                <WaterDrop
+                  size={16}
+                  color={white && !isScolled ? "#fff" : "#DA3947"}
+                />
               </span>
               <span>{link.name}</span>
               <div
@@ -128,7 +143,7 @@ const Navbar = () => {
                     <Link
                       key={child.name}
                       href={child.link}
-                      className="text-sm text-[#30241E]/[0.72] hover:text-[#30241E] hover:font-medium transition-colors duration-200"
+                      className="text-sm text-[#30241E]/[0.72] hover:text-[#30241E] font-medium transition-colors duration-200"
                     >
                       {child.name}
                     </Link>
@@ -140,10 +155,18 @@ const Navbar = () => {
             <Link
               key={link.name}
               href={link.link}
-              className="group relative text-[#30241E]/[0.72] text-sm font-bold tracking-[0.56px] hover:text-[#30241E] transition-colors duration-300"
+              className={clsx(
+                "group relative text-sm font-bold tracking-[0.56px]  transition-colors duration-300 flex items-center",
+                white && !isScolled
+                  ? "text-white"
+                  : "text-[#30241E]/[0.72] hover:text-[#30241E]"
+              )}
             >
               <span className="absolute -left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <WaterDrop size={16} color="#DA3947" />
+                <WaterDrop
+                  size={16}
+                  color={white && !isScolled ? "#fff" : "#DA3947"}
+                />
               </span>
               <span>{link.name}</span>
             </Link>
@@ -151,7 +174,12 @@ const Navbar = () => {
         )}
         <Link
           href="/contact"
-          className="ml-[-14px] text-xs px-6 py-2 border-1 font-bold border-[#30241E]/[0.72] rounded-[4px] text-[#30241E]/[0.72] hover:text-[#30241E] transition-colors duration-200"
+          className={clsx(
+            "ml-[-14px] text-xs px-6 py-2 border-1 font-bold  rounded-[4px] transition-colors duration-200",
+            white && !isScolled
+              ? "text-white border-white hover:bg-white hover:text-deep-brown active:bg-[#F5F5F5]"
+              : "text-[#30241E]/[0.72] border-[#30241E]/[0.72] hover:bg-[#30241E] hover:text-white active:bg-[#403028]"
+          )}
         >
           聯絡我們
         </Link>
