@@ -45,7 +45,7 @@ const Sidebar = ({ white = false }) => {
         <Menu
           onClick={() => setIsOpen(true)}
           className="cursor-pointer xl:hidden"
-          color={white ? "#fff" : "#DA3947"}
+          color={white ? "#fff" : "#30241E"}
         />
       )}
 
