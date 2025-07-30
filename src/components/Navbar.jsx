@@ -74,7 +74,7 @@ export const LINKS = [
   },
 ];
 
-const Navbar = () => {
+const Navbar = ({ white = false}) => {
   const [isScolled, setIsScolled] = useState(false);
 
   useEffect(() => {
@@ -100,12 +100,12 @@ const Navbar = () => {
       )}
     >
       <div className="flex items-center gap-2.5">
-        <Logo />
-        <h1 className="text-[#30241E] text-lg font-medium tracking-[3.24px]">
+        <Logo color={white ? "#fff" : "#DA3947"} />
+        <h1 className={clsx("text-lg font-medium tracking-[3.24px]", white ? "text-white" : "text-[#30241E]")}>
           晉弘實業股份有限公司
         </h1>
       </div>
-      <Sidebar />
+      <Sidebar white={white} />
       <div className="hidden xl:flex gap-16 items-center">
         {LINKS.slice(0, 5).map((link) =>
           link.children ? (

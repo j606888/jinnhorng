@@ -9,7 +9,7 @@ import ArrowDown from "./icons/ArrowDown";
 import { LINKS } from "./Navbar";
 import WaterDrop from "@/components/icons/WaterDrop";
 
-const Sidebar = () => {
+const Sidebar = ({ white = false }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [expanded, setExpanded] = useState(null);
   const sidebarRef = useRef(null);
@@ -45,6 +45,7 @@ const Sidebar = () => {
         <Menu
           onClick={() => setIsOpen(true)}
           className="cursor-pointer xl:hidden"
+          color={white ? "#fff" : "#DA3947"}
         />
       )}
 
