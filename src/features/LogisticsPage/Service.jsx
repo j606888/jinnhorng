@@ -24,7 +24,7 @@ const SERVICE_DATA = [
 const Service = () => {
   return (
     <section>
-      <div className="flex gap-2 px-10 py-4 text-sm tracking-[0.84px] font-normal text-[#30241E] lg:px-25 max-w-[1080px] mx-auto xl:px-15">
+      <div className="flex gap-2 px-5 py-4 text-sm tracking-[0.84px] font-normal text-[#30241E] lg:px-25 max-w-[1080px] mx-auto xl:px-15">
         <span>首頁</span>
         <span>{">"}</span>
         <span className="font-bold">物流服務</span>
