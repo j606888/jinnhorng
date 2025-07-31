@@ -40,7 +40,7 @@ const Control = () => {
             <h2 className="text-deep-brown text-[28px] font-bold tracking-[2.24px] mb-4">
             證書與標章
             </h2>
-            <p className="text-deep-brown/[0.82] tracking-[0.64px]">
+            <p className="text-deep-brown/[0.82] tracking-[0.64px] xl:text-lg">
             我們堅守每一道製程細節，並通過多項國際標準與專業機構的認證，為客戶打造安全、高品質、值得信賴的產品體驗。
             </p>
           </div>
