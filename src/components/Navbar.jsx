@@ -48,19 +48,19 @@ export const LINKS = [
     children: [
       {
         name: "品質控管",
-        link: "/quality",
+        link: "/quality/control",
       },
       {
         name: "製程流程",
-        link: "/quality",
+        link: "/quality/process",
       },
       {
         name: "證書與標章",
-        link: "/quality",
+        link: "/quality/certificates",
       },
       {
         name: "檢測報告",
-        link: "/quality",
+        link: "/quality/reports",
       },
     ],
   },
