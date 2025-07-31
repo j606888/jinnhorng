@@ -26,7 +26,7 @@ const Control = () => {
     <>
       <Navbar white />
       <Hero />
-      <section>
+      <section className="relative">
         <div className="flex gap-2 px-5 py-4 text-sm tracking-[0.84px] font-normal text-[#30241E] md:px-10 lg:px-15 max-w-[1080px] mx-auto xl:px-0">
           <span>首頁</span>
           <span>{">"}</span>
@@ -49,16 +49,20 @@ const Control = () => {
             </p>
           </div>
           <div className="flex flex-col gap-5 md:flex-row items-center justify-center">
-            <img
-              src="/images/quality/lab-1.jpg"
-              alt="lab-1"
-              className="w-full max-w-[500px] rounded-[6px] overflow-hidden xl:max-w-none"
-            />
-            <img
-              src="/images/quality/lab-2.jpg"
-              alt="lab-2"
-              className="w-full max-w-[500px] rounded-[6px] overflow-hidden xl:max-w-none"
-            />
+            <div className="w-full max-w-[500px] rounded-[6px] overflow-hidden xl:max-w-none">
+              <img
+                src="/images/quality/lab-1.jpg"
+                alt="lab-1"
+                className="w-full hover:scale-102 transition-all duration-500"
+              />
+            </div>
+            <div className="w-full max-w-[500px] rounded-[6px] overflow-hidden xl:max-w-none">
+              <img
+                src="/images/quality/lab-2.jpg"
+                alt="lab-2"
+                className="w-full hover:scale-102 transition-all duration-500"
+              />
+            </div>
           </div>
         </div>
         <div className="px-5 py-15 text-center md:px-10 lg:px-15 lg:py-20 max-w-[1080px] mx-auto xl:px-0">
@@ -68,11 +72,11 @@ const Control = () => {
           <p className="text-deep-brown/[0.82] tracking-[0.64px] mb-10">
             針對食品法規規定的微生物項目，例如沙門氏桿菌、金黃色葡萄球菌等，我們進行逐批檢測與長期監控。同時，每年也會定期由第三方實驗室進行全面性檢測，包括二氧化硫、重金屬、塑化劑等重要指標，從源頭到出廠，全方位守護食品安全。
           </p>
-          <div className="flex flex-col gap-4 md:flex-row">
+          <div className="flex flex-col gap-4 items-center justify-center md:items-stretch md:flex-row ">
             {CONTROL_DATA.map((item) => (
               <div
                 key={item.title}
-                className="flex flex-col w-full gap-3 px-7 py-10 rounded-[10px] bg-white shadow-[0_2px_18px_0_rgba(0,0,0,0.12)]"
+                className="flex flex-col w-full max-w-[500px] gap-3 px-7 py-10 rounded-[10px] bg-white shadow-[0_2px_18px_0_rgba(0,0,0,0.12)]"
               >
                 <img
                   src={item.image}
@@ -89,6 +93,8 @@ const Control = () => {
             ))}
           </div>
         </div>
+        <img src="/images/quality/micro.png" alt="micro" className="hidden md:block absolute left-0 top-[219px] w-[160px] -z-10 lg:top-[248px] lg:w-[200px]" />
+        <img src="/images/quality/cup.png" alt="cup" className="hidden md:block absolute right-0 top-[484px] w-[153px] -z-10 lg:top-[531px] lg:w-[200px] xl:top-[582px]" />
       </section>
       <section className="px-5 py-15 bg-[#F7F3F2] text-center">
         <h3 className="text-deep-brown text-[28px] font-bold tracking-[2.24px] mb-4">
