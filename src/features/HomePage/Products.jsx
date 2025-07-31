@@ -6,7 +6,7 @@ import ArrowLarge from "@/components/icons/ArrowLarge";
 import { clsx } from "clsx";
 import { motion } from "motion/react";
 
-const PRODUCTS = [
+export const PRODUCTS = [
   {
     name: "果糖(高果糖糖漿)",
     enName: "Fructose (Fructose Syrup)",
