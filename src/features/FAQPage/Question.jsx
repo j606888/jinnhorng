@@ -1,17 +1,14 @@
-import { useState } from "react";
 import Expand from "@/components/icons/Expand";
 import Collapse from "@/components/icons/Collapse";
 import clsx from "clsx";
 
-const Question = ({ id, question, answer }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
+const Question = ({ id, question, answer, onClick, isOpen }) => {
   return (
     <div className={clsx(
       "rounded-[10px] border-[1px] border-deep-brown/[0.16] ",
       isOpen ? "bg-[#F8F7F7] border-l-6 border-l-[#DA3947]" : ""
     )}>
-      <div className="flex gap-6 items-center p-4 cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
+      <div className="flex gap-6 items-center p-4 cursor-pointer" onClick={onClick}>
         <div className="text-deep-brown/[0.82] text-lg font-semibold tracking-[1.08px]">
           {id}
         </div>
