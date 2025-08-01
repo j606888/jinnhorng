@@ -1,6 +1,8 @@
-import { PRODUCTS } from "@/features/HomePage/Products";
+import { PRODUCTS } from "@/lib/products";
+import { useRouter } from "next/navigation";
 
 const Products = () => {
+  const router = useRouter()
   return (
     <>
       <section className="relative">
@@ -17,6 +19,7 @@ const Products = () => {
               <div
                 key={item.enName}
                 className="flex flex-col gap-5 items-center cursor-pointer group"
+                onClick={() => router.push(`/products/${item.slug}`)}
               >
                 <div className="border border-[#E0E0E0] bg-white rounded-[10px] overflow-hidden max-w-[340px]">
                   <img

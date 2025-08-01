@@ -22,17 +22,17 @@ const Detail = ({ product }) => {
   return (
     <section>
       <div className={`py-12 ${ContainerClass}`}>
-        <div className="flex items-center justify-center mb-2.5">
+        <div className="flex items-center justify-center mb-2.5 md:mb-4">
           {TABS.map((tab) => (
-            <div key={tab.key} className={` text-sm font-bold tracking-[0.56px] px-4 py-3 border-b-3  cursor-pointer ${activeTab === tab.key ? 'border-[#DA3947] text-deep-brown' : 'text-deep-brown/[0.6] border-transparent'}`} onClick={() => setActiveTab(tab.key)}>
+            <div key={tab.key} className={`text-sm font-bold tracking-[0.56px] px-4 py-3 border-b-3  cursor-pointer md:w-[150px] text-center ${activeTab === tab.key ? 'border-[#DA3947] text-deep-brown' : 'text-deep-brown/[0.6] border-transparent'}`} onClick={() => setActiveTab(tab.key)}>
               {tab.label}
             </div>
           ))}
         </div>
-        <div className="px-3 py-6 bg-[#F8F7F7] rounded-[10px]">
+        <div className="px-3 py-6 bg-[#F8F7F7] rounded-[10px] md:px-[50px]">
           {activeTabData.map((specification) => (
-            <div key={specification.name} className="flex gap-6 items-center py-2.5 border-b-1 border-deep-brown/[0.08]">
-              <p className="w-[88px] flex-shrink-0 text-deep-brown text-sm font-medium tracking-[0.56px] leading-[30px]">{specification.name}</p>
+            <div key={specification.name} className="flex gap-6 items-center py-2.5 border-b-1 last:border-b-0 border-deep-brown/[0.08] md:gap-20">
+              <p className="w-[88px] flex-shrink-0 text-deep-brown text-sm font-medium tracking-[0.56px] leading-[30px] md:w-[120px]">{specification.name}</p>
               <p className="text-deep-brown/[0.82] text-sm font-normal tracking-[0.56px] leading-[24px]" dangerouslySetInnerHTML={{ __html: specification.value }} />
             </div>
           ))}

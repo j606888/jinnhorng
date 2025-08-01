@@ -1,6 +1,7 @@
 import { useMemo, useRef, useState } from "react";
 import { PRODUCTS } from "@/lib/products";
 import { useRouter } from "next/navigation";
+import ProductCarousel from "./ProductCarousel";
 
 const ContainerClass = "px-5 md:px-10 lg:px-15 max-w-[1080px] mx-auto xl:px-0"
 
@@ -26,7 +27,7 @@ const OtherProducts = ({ product }) => {
   return <section>
     <div className={`pt-12 pb-20`}>
       <h4 className="text-deep-brown text-[18px] font-bold tracking-[1.44px] mb-8 mx-auto text-center">看看其他產品</h4>
-      <div className="w-full max-w-screen-sm">
+      <div className="w-full md:hidden">
         <div ref={scrollRef} onScroll={handleScroll} className="flex gap-9 overflow-x-auto snap-x px-5 pb-8" style={{ scrollbarWidth: 'none' }}>
           {otherProducts.map((product) => (
             <div key={product.slug} className="flex-shrink-0 w-[277px] snap-center text-center cursor-pointer" onClick={() => router.push(`/products/${product.slug}`)}>
@@ -41,6 +42,9 @@ const OtherProducts = ({ product }) => {
             <div className={`h-full bg-[#DA3947] w-10`} style={{ marginLeft }}></div>
           </div>
         </div>
+      </div>
+      <div className="hidden md:block">
+        <ProductCarousel products={otherProducts} />
       </div>
     </div>
   </section>;

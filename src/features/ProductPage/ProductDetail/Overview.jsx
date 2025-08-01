@@ -20,9 +20,9 @@ const Overview = ({ product }) => {
         <span>{">"}</span>
         <span className="font-bold">{product.name}</span>
       </div>
-      <div className={`flex flex-col gap-10 py-9 ${ContainerClass}`}>
-        <div>
-          <div className="border-1 border-[#E0E0E0] rounded-[8px] overflow-hidden max-w-[366px] mb-4 relative">
+      <div className={`flex flex-col gap-10 py-9 ${ContainerClass} md:flex-row xl:gap-15`}>
+        <div className="md:w-1/2 xl:flex-shrink-0 xl:w-auto">
+          <div className="border-1 border-[#E0E0E0] rounded-[8px] overflow-hidden max-w-[366px] mb-4 relative mx-auto md:mx-0 lg:max-w-[432px] xl:max-w-[500px]">
             <img src={selectedPreview.image} alt={selectedPreview.name} />
             {previewIndex > 0 && (
               <ButtonPrevious
@@ -37,7 +37,7 @@ const Overview = ({ product }) => {
               />
             )}
           </div>
-          <div className="flex gap-4 items-center justify-center">
+          <div className="flex gap-4 items-center justify-center md:justify-start">
             {product.previews.map((preview, index) => (
               <div
                 key={index}
@@ -53,25 +53,25 @@ const Overview = ({ product }) => {
             ))}
           </div>
         </div>
-        <div className="">
+        <div className="md:w-1/2 xl:w-auto">
           <h2 className="text-deep-brown text-[26px] font-bold tracking-[2.08px] mb-[7px]">
             {product.name}
           </h2>
-          <p className="text-deep-brown text-[14px] font-normal tracking-[0.56px] mb-7">
+          <p className="text-deep-brown text-[14px] font-normal tracking-[0.56px] mb-7 xl:mb-9">
             {product.enName}
           </p>
           <div
             dangerouslySetInnerHTML={{ __html: product.description }}
-            className="tracking-[0.64px] mb-7"
+            className="tracking-[0.64px] mb-7 xl:mb-9"
           />
           <p className="text-deep-brown/[0.82] text-[15px] font-bold tracking-[0.6px] mb-4">
             產品預覽
           </p>
-          <div className="flex flex-wrap gap-3 mb-7">
+          <div className="flex flex-wrap gap-3 mb-7 xl:mb-9">
             {product.previews.map((preview, index) => (
               <div
                 key={index}
-                className={`px-4 py-3 border-1  rounded-[4px]  text-sm font-normal tracking-[0.56px] cursor-pointer  ${
+                className={`px-4 py-3 border-1 rounded-[4px] text-sm font-normal tracking-[0.56px] cursor-pointer ${
                   selectedPreview.name === preview.name
                     ? "text-[#DA3947] border-[#DA3947]"
                     : "text-deep-brown border-[#E0E0E0]"
@@ -82,16 +82,16 @@ const Overview = ({ product }) => {
               </div>
             ))}
           </div>
-          <div className="flex flex-col gap-2.5">
+          <div className="flex flex-col gap-2.5 lg:flex-row lg:gap-3">
             <Link
               href="/quality/process"
-              className="text-deep-brown font-bold tracking-[0.64px] px-6 py-4 border-1 border-[#E0E0E0] rounded-[8px] text-center cursor-pointer"
+              className="text-deep-brown font-bold tracking-[0.64px] px-6 py-4 border-1 border-[#E0E0E0] rounded-[8px] text-center cursor-pointer lg:w-[192px]"
             >
               看看產品製程流程
             </Link>
             <Link
               href="/logistics"
-              className="font-bold tracking-[0.64px] px-6 py-4 rounded-[8px] text-center cursor-pointer bg-[#DA3947] text-white"
+              className="font-bold tracking-[0.64px] px-6 py-4 rounded-[8px] text-center cursor-pointer bg-[#DA3947] text-white lg:w-[192px]"
             >
               了解物流服務
             </Link>
