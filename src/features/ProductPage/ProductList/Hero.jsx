@@ -1,7 +1,7 @@
 const Hero = () => {
   return <section className="relative w-full h-[360px] bg-[url('/images/products/banner.jpg')] bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center z-1 overflow-hidden lg:h-[458px]">
     <div className='mt-[60px] text-center z-2'>
-      <h2 className='text-white font-ar text-xl font-semibold tracking-[1.2px] mb-[2px] uppercase [text-shadow:0_0_8.1px_rgba(0,0,0,0.25)]'>Products</h2>
+      <h2 className='text-white font-ar text-xl font-semibold tracking-[1.2px] mb-[2px] uppercase [text-shadow:0_0_8.1px_rgba(0,0,0,0.25)]'>Product</h2>
       <h1 className='text-white text-[36px] font-bold tracking-[2.88px]'>產品系列</h1>
     </div>
     <div className="absolute top-0 left-0 w-full h-[90px]" style={{ background: 'linear-gradient(0deg, rgba(0, 0, 0, 0.00) 9.34%, rgba(0, 0, 0, 0.30) 100%)' }}></div>

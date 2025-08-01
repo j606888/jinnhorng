@@ -38,8 +38,12 @@ const Service = () => {
           我們建構自有物流體系，精準掌握每一項配送細節，穩妥串接生產與交付之間的每一環，成為您供應鏈中最值得信賴的後勤支援。
         </p>
         <div className="flex flex-col gap-5 md:flex-row">
-          <div className='w-full h-[234px] rounded-[10px] bg-[url("/images/logistics/truck-1.jpg")] bg-cover bg-center bg-no-repeat lg:h-[310px]'></div>
-          <div className='w-full h-[234px] rounded-[10px] bg-[url("/images/logistics/truck-2.jpg")] bg-cover bg-center bg-no-repeat lg:h-[310px]'></div>
+          <div className='w-full h-[234px] rounded-[10px] overflow-hidden lg:h-[310px]'>
+            <img src="/images/logistics/truck-1.jpg" alt="truck-1" className="w-full h-full object-cover hover:scale-102 transition-all duration-300" />
+          </div>
+          <div className='w-full h-[234px] rounded-[10px] overflow-hidden lg:h-[310px]'>
+            <img src="/images/logistics/truck-2.jpg" alt="truck-2" className="w-full h-full object-cover hover:scale-102 transition-all duration-300" />
+          </div>
         </div>
       </div>
       <div className="flex flex-col px-5 md:px-10 lg:px-15 max-w-[1080px] mx-auto">

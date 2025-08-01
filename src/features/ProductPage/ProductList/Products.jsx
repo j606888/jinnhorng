@@ -29,10 +29,10 @@ const Products = () => {
                   />
                 </div>
                 <div>
-                  <p className="text-deep-brown text-[15px] font-medium tracking-[0.6px] mb-1">
+                  <p className="text-deep-brown text-[15px] font-medium tracking-[0.6px] mb-1 group-hover:text-deep-brown/75">
                     {item.name}
                   </p>
-                  <p className="text-deep-brown/[0.82] text-xs tracking-[0.48px]">
+                  <p className="text-deep-brown/[0.82] text-xs tracking-[0.48px] group-hover:text-deep-brown/50">
                     {item.enName}
                   </p>
                 </div>

@@ -17,7 +17,7 @@ const EveryStep = () => {
               <img
                 src="/images/about/employee.jpg"
                 alt="employee"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover hover:scale-102 transition-all duration-300"
               />
             </div>
           </div>
@@ -40,7 +40,7 @@ const EveryStep = () => {
               <img
                 src="/images/about/certificate.jpg"
                 alt="certificate"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover hover:scale-102 transition-all duration-300"
               />
             </div>
           </div>
