@@ -12,7 +12,7 @@ const ContactUs = () => {
         viewport={{ once: true }}
         className="relative flex flex-col items-center text-center md:items-start max-w-[1080px] mx-auto z-1"
       >
-        <h3 className="text-[#30241E] text-[28px] font-bold mb-3 tracking-[3.2px] md:text-[36px] md:text-start md:mb-5 xl:text-[40px] 2xl:text-[48px]">
+        <h3 className="text-deep-brown text-[28px] font-bold mb-3 tracking-[2.24px] md:text-[36px] md:text-start md:mb-5 xl:text-[40px] xl:tracking-[3.2px]">
           {" "}
           聯絡我們
           <br />

@@ -14,7 +14,7 @@ const CtaButton = ({ children, className, url, onClick }) => {
       onClick={onClick}
     >
       <WaterDrop size={20} />
-      <span className="text-base font-bold  leading-[normal] tracking-[0.64px]、、">
+      <span className="text-sm font-bold  leading-[normal] tracking-[0.56px]">
         {children}
       </span>
       <ArrowLight />

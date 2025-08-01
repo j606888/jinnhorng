@@ -12,7 +12,7 @@ const Hero = () => {
         viewport={{ once: true }}
         className="relative flex flex-col gap-5 items-center justify-center pt-[96px] text-[#30241E] z-10 md:gap-[28px] md:pt-[304px] lg:pt-[176px]"
       >
-        <h1 className="text-5xl font-medium tracking-[3.84px] leading-[1.5]">
+        <h1 className="text-[40px] font-medium tracking-[3.2px] leading-[1.5]">
           專業製糖
           <br className="block md:hidden" />
           <span className="hidden md:inline"> </span>

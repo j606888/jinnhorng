@@ -35,7 +35,7 @@ const Quality = () => {
             品質守護
           </h3>
           <Stroke className="md:w-[120px] md:h-[24px]" />
-          <h2 className="text-white text-4xl font-bold tracking-[2.88px] leading-[1.5] mb-3 md:text-[40px] md:tracking-[3.2px] md:mb-5 lg:text-[48px] lg:tracking-[3.8px]">
+          <h2 className="text-white text-[28px] font-bold tracking-[2.24px] mb-3 md:text-[36px] md:tracking-[2.88px] xl:text-[40px] xl:tracking-[3.2px]">
             專業製程，成就值得信賴的品質
           </h2>
           <p className="text-white text-center tracking-[0.64px] lg:text-[20px] lg:font-medium lg:tracking-[0.8px] lg:w-[664px]">
