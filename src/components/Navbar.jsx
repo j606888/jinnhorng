@@ -79,6 +79,7 @@ export const LINKS = [
 
 const Navbar = ({ white = false }) => {
   const [isScolled, setIsScolled] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(null);
   const currentPath = usePathname();
 
   useEffect(() => {
@@ -115,28 +116,45 @@ const Navbar = ({ white = false }) => {
             <div
               key={link.name}
               className={clsx(
-                "text-sm font-bold tracking-[0.56px] relative group  transition-colors duration-300 flex items-center",
+                "text-sm font-bold tracking-[0.56px] relative group  transition-colors duration-300 flex items-center cursor-pointer",
                 white && !isScolled
                   ? "text-white"
                   : "text-[#30241E]/[0.72] hover:text-[#30241E]"
               )}
+              onClick={() =>
+                setOpenDropdown(openDropdown === link.name ? null : link.name)
+              }
+              onMouseEnter={() => setOpenDropdown(link.name)}
+              onMouseLeave={() => setOpenDropdown(null)}
             >
-              <span className="absolute -left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <span
+                className={clsx(
+                  "absolute -left-5 transition-opacity duration-300",
+                  openDropdown === link.name || false
+                    ? "opacity-100 visible"
+                    : "opacity-0 invisible"
+                )}
+              >
                 <WaterDrop
                   size={16}
                   color={white && !isScolled ? "#fff" : "#DA3947"}
                 />
               </span>
-              {currentPath.includes(link.link) && <span className="absolute -left-5">
-                <WaterDrop
-                  size={16}
-                  color={white && !isScolled ? "#fff" : "#DA3947"}
-                />
-              </span>}
+              {currentPath.includes(link.link) && (
+                <span className="absolute -left-5">
+                  <WaterDrop
+                    size={16}
+                    color={white && !isScolled ? "#fff" : "#DA3947"}
+                  />
+                </span>
+              )}
               <span>{link.name}</span>
               <div
                 className={clsx(
-                  "absolute -left-5 top-full opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300",
+                  "absolute -left-5 top-full transition-all duration-300",
+                  openDropdown === link.name
+                    ? "opacity-100 visible"
+                    : "opacity-0 invisible",
                   isScolled ? "pt-7" : "pt-5"
                 )}
               >
@@ -145,7 +163,12 @@ const Navbar = ({ white = false }) => {
                     <Link
                       key={child.name}
                       href={child.link}
-                      className={`${child.link === currentPath ? 'text-[#30241E]' : 'text-[#30241E]/[0.72]'} text-sm hover:text-[#30241E] font-medium transition-colors duration-200`}
+                      className={`${
+                        child.link === currentPath
+                          ? "text-[#30241E]"
+                          : "text-[#30241E]/[0.72]"
+                      } text-sm hover:text-[#30241E] font-medium transition-colors duration-200`}
+                      onClick={() => setOpenDropdown(null)}
                     >
                       {child.name}
                     </Link>
@@ -170,12 +193,14 @@ const Navbar = ({ white = false }) => {
                   color={white && !isScolled ? "#fff" : "#DA3947"}
                 />
               </span>
-              {link.link === currentPath && <span className="absolute -left-5">
-                <WaterDrop
-                  size={16}
-                  color={white && !isScolled ? "#fff" : "#DA3947"}
-                />
-              </span>}
+              {link.link === currentPath && (
+                <span className="absolute -left-5">
+                  <WaterDrop
+                    size={16}
+                    color={white && !isScolled ? "#fff" : "#DA3947"}
+                  />
+                </span>
+              )}
               <span>{link.name}</span>
             </Link>
           )
