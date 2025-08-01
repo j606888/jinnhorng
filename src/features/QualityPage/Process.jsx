@@ -4,6 +4,7 @@ import Footer from "../shared/Footer";
 import Hero from "./Hero";
 import { useState, useRef, useEffect } from "react";
 import ArrowDown from "@/components/icons/ArrowDown";
+import AnimateDiv from "@/features/shared/AnimateDiv";
 
 const PRODUCTS = [
   {
@@ -69,14 +70,14 @@ const Control = () => {
       <Navbar white />
       <Hero />
       <section className="relative">
-        <div className="flex gap-2 px-5 py-4 text-sm tracking-[0.84px] font-normal text-[#30241E] md:px-10 lg:px-15 max-w-[1080px] mx-auto xl:px-0">
+        <AnimateDiv className="flex gap-2 px-5 py-4 text-sm tracking-[0.84px] font-normal text-[#30241E] md:px-10 lg:px-15 max-w-[1080px] mx-auto xl:px-0">
           <span>首頁</span>
           <span>{">"}</span>
           <span>品質守護</span>
           <span>{">"}</span>
           <span className="font-bold">製程流程</span>
-        </div>
-        <div className="px-5 pt-15 pb-20 text-center md:px-10 lg:px-15 lg:pt-20 max-w-[1080px] mx-auto xl:px-0">
+        </AnimateDiv>
+        <AnimateDiv className="px-5 pt-15 pb-20 text-center md:px-10 lg:px-15 lg:pt-20 max-w-[1080px] mx-auto xl:px-0">
           <div className="flex flex-col mb-10">
             <h2 className="text-deep-brown text-[28px] font-bold tracking-[2.24px] mb-4">
               製程流程
@@ -139,7 +140,7 @@ const Control = () => {
               />
             </div>
           )}
-        </div>
+        </AnimateDiv>
       </section>
       <ContactUs />
       <Footer />

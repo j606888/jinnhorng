@@ -1,5 +1,6 @@
 import { PRODUCTS } from "@/lib/products";
 import { useRouter } from "next/navigation";
+import AnimateDiv from "@/features/shared/AnimateDiv";
 
 const Products = () => {
   const router = useRouter()
@@ -13,7 +14,7 @@ const Products = () => {
           <span>{">"}</span>
           <span className="font-bold">所有產品</span>
         </div>
-        <div className="px-5 pt-15 pb-20 text-center md:px-10 lg:px-15 lg:pt-20 lg:pb-30 xl:pt-25 max-w-[1080px] mx-auto xl:px-0">
+        <AnimateDiv className="px-5 pt-15 pb-20 text-center md:px-10 lg:px-15 lg:pt-20 lg:pb-30 xl:pt-25 max-w-[1080px] mx-auto xl:px-0">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-15 md:gap-9 md:gap-y-10 lg:gap-y-15">
             {PRODUCTS.map((item) => (
               <div
@@ -29,17 +30,17 @@ const Products = () => {
                   />
                 </div>
                 <div>
-                  <p className="text-deep-brown text-[15px] font-medium tracking-[0.6px] mb-1">
+                  <p className="text-deep-brown text-[15px] font-medium tracking-[0.6px] mb-1 group-hover:text-deep-brown/75">
                     {item.name}
                   </p>
-                  <p className="text-deep-brown/[0.82] text-xs tracking-[0.48px]">
+                  <p className="text-deep-brown/[0.82] text-xs tracking-[0.48px] group-hover:text-deep-brown/50">
                     {item.enName}
                   </p>
                 </div>
               </div>
             ))}
           </div>
-        </div>
+        </AnimateDiv>
       </section>
     </>
   );

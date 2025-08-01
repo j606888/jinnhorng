@@ -4,7 +4,7 @@ import CtaButton from "@/components/CtaButton";
 import { useState, useEffect } from "react";
 import ArrowLarge from "@/components/icons/ArrowLarge";
 import { clsx } from "clsx";
-import { motion } from "motion/react";
+import AnimateDiv from "@/features/shared/AnimateDiv";
 
 export const PRODUCTS = [
   {
@@ -102,11 +102,7 @@ const Products = () => {
 
   return (
     <section className="py-15 bg-[#F7F3F2] relative overflow-hidden md:py-24 ">
-        <motion.div
-          initial={{ opacity: 0, y: 100 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.3 }}
-          viewport={{ once: true }}
+        <AnimateDiv
           className="mb-14 px-5 flex flex-col items-center xl:mb-20"
       >
         <h3 className="text-[#604C2B]/50 font-semibold tracking-[0.96px] mb-1 md:text-xl">
@@ -124,8 +120,8 @@ const Products = () => {
           <br className="hidden md:block" />
           適用於各式食品、飲品與甜點，是您可以安心選擇的甜味原料。
         </p>
-      </motion.div>
-      <div className="flex flex-col items-center px-[37.5px] gap-4 mb-14 z-2 relative md:flex-row lg:justify-center lg:gap-[18px] xl:gap-14 xl:mb-20">
+      </AnimateDiv>
+      <AnimateDiv className="flex flex-col items-center px-[37.5px] gap-4 mb-14 z-2 relative md:flex-row lg:justify-center lg:gap-[18px] xl:gap-14 xl:mb-20">
         <div className="flex flex-col md:hidden gap-4">
           {PRODUCTS.map((product) => (
             <ProductCard key={product.name} {...product} />
@@ -151,7 +147,7 @@ const Products = () => {
           direction="right"
           onClick={next}
         />
-      </div>
+      </AnimateDiv>
       <CtaButton className="m-auto" url="/products">探索更多產品系列</CtaButton>
       <img
         src="/images/homepage/sugar_bottle.png"

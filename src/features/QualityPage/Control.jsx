@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import ContactUs from "../shared/ContactUs";
 import Footer from "../shared/Footer";
 import Hero from "./Hero";
+import AnimateDiv from "@/features/shared/AnimateDiv";
 
 const CONTROL_DATA = [
   {
@@ -27,14 +28,14 @@ const Control = () => {
       <Navbar white />
       <Hero />
       <section className="relative">
-        <div className="flex gap-2 px-5 py-4 text-sm tracking-[0.84px] font-normal text-[#30241E] md:px-10 lg:px-15 max-w-[1080px] mx-auto xl:px-0">
+        <AnimateDiv className="flex gap-2 px-5 py-4 text-sm tracking-[0.84px] font-normal text-[#30241E] md:px-10 lg:px-15 max-w-[1080px] mx-auto xl:px-0">
           <span>首頁</span>
           <span>{">"}</span>
           <span>品質守護</span>
           <span>{">"}</span>
           <span className="font-bold">品質控管</span>
-        </div>
-        <div className="px-5 pt-15 pb-0 text-center md:px-10 lg:px-15 lg:pt-20 max-w-[1080px] mx-auto xl:px-0">
+        </AnimateDiv>
+        <AnimateDiv className="px-5 pt-15 pb-0 text-center md:px-10 lg:px-15 lg:pt-20 max-w-[1080px] mx-auto xl:px-0">
           <div className="flex flex-col mb-10 lg:flex-row lg:gap-5">
             <h2 className="text-deep-brown text-[28px] font-bold tracking-[2.24px] mb-4 lg:w-[calc(50%-10px)] lg:text-start">
               全面把關
@@ -64,8 +65,8 @@ const Control = () => {
               />
             </div>
           </div>
-        </div>
-        <div className="px-5 py-15 text-center md:px-10 lg:px-15 lg:py-20 max-w-[1080px] mx-auto xl:px-0">
+        </AnimateDiv>
+        <AnimateDiv className="px-5 py-15 text-center md:px-10 lg:px-15 lg:py-20 max-w-[1080px] mx-auto xl:px-0">
           <h2 className="text-deep-brown text-[28px] font-bold tracking-[2.24px] mb-4">
             品管落實到每個細節
           </h2>
@@ -92,19 +93,29 @@ const Control = () => {
               </div>
             ))}
           </div>
-        </div>
-        <img src="/images/quality/micro.png" alt="micro" className="hidden md:block absolute left-0 top-[219px] w-[160px] -z-10 lg:top-[248px] lg:w-[200px]" />
-        <img src="/images/quality/cup.png" alt="cup" className="hidden md:block absolute right-0 top-[484px] w-[153px] -z-10 lg:top-[531px] lg:w-[200px] xl:top-[582px]" />
+        </AnimateDiv>
+        <img
+          src="/images/quality/micro.png"
+          alt="micro"
+          className="hidden md:block absolute left-0 top-[219px] w-[160px] -z-10 lg:top-[248px] lg:w-[200px]"
+        />
+        <img
+          src="/images/quality/cup.png"
+          alt="cup"
+          className="hidden md:block absolute right-0 top-[484px] w-[153px] -z-10 lg:top-[531px] lg:w-[200px] xl:top-[582px]"
+        />
       </section>
       <section className="px-5 py-15 bg-[#F7F3F2] text-center">
-        <h3 className="text-deep-brown text-[28px] font-bold tracking-[2.24px] mb-4">
-          持續優化品管系統，邁向更高標準
-        </h3>
-        <p className="text-deep-brown/[0.82] tracking-[0.64px]">
-          未來，晉弘將持續強化實驗室能力與設備升級，深化品管專業團隊的訓練，
-          <br />
-          只為讓每一項產品，都是你可以放心選擇的品質保證。
-        </p>
+        <AnimateDiv>
+          <h3 className="text-deep-brown text-[28px] font-bold tracking-[2.24px] mb-4">
+            持續優化品管系統，邁向更高標準
+          </h3>
+          <p className="text-deep-brown/[0.82] tracking-[0.64px]">
+            未來，晉弘將持續強化實驗室能力與設備升級，深化品管專業團隊的訓練，
+            <br />
+            只為讓每一項產品，都是你可以放心選擇的品質保證。
+          </p>
+        </AnimateDiv>
       </section>
       <ContactUs />
       <Footer />

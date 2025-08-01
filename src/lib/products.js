@@ -18,6 +18,10 @@ export const PRODUCTS = [
         name: '5kg 食品級塑膠桶',
         image: '/images/products/fructose_5kg.jpg',
       },
+      {
+        name: '30kg 食品級塑膠桶',
+        image: '/images/products/banana.png',
+      },
     ],
     specifications: [
       {
@@ -95,11 +99,15 @@ export const PRODUCTS = [
       },
       {
         name: '3kg 食品級塑膠袋',
-        image: '/images/products/banana.png',
+        image: '/images/products/sugar_syrup_3kg.jpg',
       },
       {
         name: '5kg 食品級塑膠桶',
-        image: '/images/products/banana.png',
+        image: '/images/products/sugar_syrup_5kg.jpg',
+      },
+      {
+        name: '30kg 食品級塑膠桶',
+        image: '/images/products/sugar_syrup_30kg.jpg',
       },
     ],
     specifications: [
@@ -169,15 +177,15 @@ export const PRODUCTS = [
     description: "麥芽糖漿以澱粉為原料，經酵素水解後製成的高黏度糖漿。<br />麥芽糖甜度約為蔗糖的 30%～50%，甜度適中又不搶味，能有效提升產品整體風味協調，並具有良好的保濕性與抗結晶性。<br />因此廣泛應用於烘焙、糖果、飲料與醬料加工等各大食品產業中。",
     previews: [
       {
-        name: '25kg 食品級塑膠桶',
+        name: '75% 麥芽糖漿',
         image: "/images/products/maltose_syrup.jpg",
       },
       {
-        name: '3kg 食品級塑膠袋',
+        name: '85%麥芽糖 / 25kg 食品級餅桶',
         image: '/images/products/banana.png',
       },
       {
-        name: '5kg 食品級塑膠桶',
+        name: '85%麥芽糖 / 30kg 食品級塑膠桶',
         image: '/images/products/banana.png',
       },
     ],

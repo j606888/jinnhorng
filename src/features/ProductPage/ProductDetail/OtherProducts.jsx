@@ -2,8 +2,7 @@ import { useMemo, useRef, useState } from "react";
 import { PRODUCTS } from "@/lib/products";
 import { useRouter } from "next/navigation";
 import ProductCarousel from "./ProductCarousel";
-
-const ContainerClass = "px-5 md:px-10 lg:px-15 max-w-[1080px] mx-auto xl:px-0"
+import AnimateDiv from "@/features/shared/AnimateDiv";
 
 const OtherProducts = ({ product }) => {
   const scrollRef = useRef(null)
@@ -25,7 +24,7 @@ const OtherProducts = ({ product }) => {
   }
 
   return <section>
-    <div className={`pt-12 pb-20`}>
+    <AnimateDiv className={`pt-12 pb-20`}>
       <h4 className="text-deep-brown text-[18px] font-bold tracking-[1.44px] mb-8 mx-auto text-center">看看其他產品</h4>
       <div className="w-full md:hidden">
         <div ref={scrollRef} onScroll={handleScroll} className="flex gap-9 overflow-x-auto snap-x px-5 pb-8" style={{ scrollbarWidth: 'none' }}>
@@ -46,7 +45,7 @@ const OtherProducts = ({ product }) => {
       <div className="hidden md:block">
         <ProductCarousel products={otherProducts} />
       </div>
-    </div>
+    </AnimateDiv>
   </section>;
 };
 

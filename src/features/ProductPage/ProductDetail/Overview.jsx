@@ -2,6 +2,7 @@ import Link from "next/link";
 import { useState } from "react";
 import ButtonNext from "./ButtonNext";
 import ButtonPrevious from "./ButtonPrevious";
+import AnimateDiv from "@/features/shared/AnimateDiv";
 
 const ContainerClass = "px-5 md:px-10 lg:px-15 max-w-[1080px] mx-auto xl:px-0";
 
@@ -11,7 +12,7 @@ const Overview = ({ product }) => {
 
   return (
     <section>
-      <div
+      <AnimateDiv
         className={`flex gap-2 py-4 text-sm tracking-[0.84px] font-normal text-[#30241E] ${ContainerClass}`}
       >
         <span>首頁</span>
@@ -19,8 +20,8 @@ const Overview = ({ product }) => {
         <span>產品系列</span>
         <span>{">"}</span>
         <span className="font-bold">{product.name}</span>
-      </div>
-      <div className={`flex flex-col gap-10 py-9 ${ContainerClass} md:flex-row xl:gap-15`}>
+      </AnimateDiv>
+      <AnimateDiv className={`flex flex-col gap-10 py-9 ${ContainerClass} md:flex-row xl:gap-15`}>
         <div className="md:w-1/2 xl:flex-shrink-0 xl:w-auto">
           <div className="border-1 border-[#E0E0E0] rounded-[8px] overflow-hidden max-w-[366px] mb-4 relative mx-auto md:mx-0 lg:max-w-[432px] xl:max-w-[500px]">
             <img src={selectedPreview.image} alt={selectedPreview.name} />
@@ -97,7 +98,7 @@ const Overview = ({ product }) => {
             </Link>
           </div>
         </div>
-      </div>
+      </AnimateDiv>
       <div className="h-2 bg-[#F8F7F7] md:hidden"></div>
     </section>
   );

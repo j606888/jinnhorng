@@ -1,9 +1,11 @@
+import AnimateDiv from "../shared/AnimateDiv";
+
 const EveryStep = () => {
   return (
     <section className="relative">
       <div className="px-5 py-20 relative md:px-10 md:pt-15 md:pb-25 lg:px-15 lg:py-20 max-w-[1080px] mx-auto xl:px-0 xl:pt-25 xl:pb-30">
         <div className="flex flex-col gap-20 z-2 lg:gap-15">
-          <div className="flex flex-col gap-10 lg:items-center lg:flex-row-reverse lg:gap-15">
+          <AnimateDiv className="flex flex-col gap-10 lg:items-center lg:flex-row-reverse lg:gap-15">
             <div className="text-center lg:text-left lg:w-full">
               <h2 className="mb-4 text-deep-brown text-[28px] font-bold tracking-[2.24px]">
                 從初心出發 <br className="hidden lg:block" />
@@ -17,11 +19,11 @@ const EveryStep = () => {
               <img
                 src="/images/about/employee.jpg"
                 alt="employee"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover hover:scale-102 transition-all duration-300"
               />
             </div>
-          </div>
-          <div className="flex flex-col gap-10 lg:items-center lg:flex-row lg:gap-15">
+          </AnimateDiv>
+          <AnimateDiv className="flex flex-col gap-10 lg:items-center lg:flex-row lg:gap-15">
             <div className="text-center lg:text-left lg:w-full">
               <h2 className="mb-4 text-deep-brown text-[28px] font-bold tracking-[2.24px]">
                 國際驗證加持 <br className="hidden lg:block" />
@@ -40,10 +42,10 @@ const EveryStep = () => {
               <img
                 src="/images/about/certificate.jpg"
                 alt="certificate"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover hover:scale-102 transition-all duration-300"
               />
             </div>
-          </div>
+          </AnimateDiv>
         </div>
       </div>
       <img
