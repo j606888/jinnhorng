@@ -1,6 +1,8 @@
 import LineLogo from "@/components/icons/LineLogo";
 import { clsx } from "clsx";
 
+const LINE_URL = 'https://line.me/ti/p/2V1AnU6i5e'
+
 const LineUs = ({ className }) => {
   return (
     <div
@@ -10,6 +12,7 @@ const LineUs = ({ className }) => {
         "active:bg-[#C43340]",
         className
       )}
+      onClick={() => window.open(LINE_URL, '_blank')}
     >
       <LineLogo className="w-10 h-10 md:w-8 md:h-8" />
       <span className="hidden text-white text-xs font-medium md:block">立即洽談</span>
