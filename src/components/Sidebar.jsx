@@ -4,12 +4,14 @@ import Menu from "./icons/Menu";
 import { useState, useEffect, useRef } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import ArrowUp from "./icons/ArrowUp";
 import ArrowDown from "./icons/ArrowDown";
 import { LINKS } from "./Navbar";
 import WaterDrop from "@/components/icons/WaterDrop";
 
 const Sidebar = ({ white = false }) => {
+  const currentPath = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [expanded, setExpanded] = useState(null);
   const sidebarRef = useRef(null);
@@ -33,6 +35,7 @@ const Sidebar = ({ white = false }) => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [isOpen]);
+
 
   return (
     <>
@@ -110,6 +113,9 @@ const Sidebar = ({ white = false }) => {
                           <span className="absolute -left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                             <WaterDrop size={16} color="#DA3947" />
                           </span>
+                          {currentPath.includes(link.link) && <span className="absolute -left-5">
+                            <WaterDrop size={16} color="#DA3947" />
+                          </span>}
                           <span>{link.name}</span>
                           {expanded === link.name ? <ArrowUp /> : <ArrowDown />}
                         </div>
@@ -127,7 +133,7 @@ const Sidebar = ({ white = false }) => {
                               <Link
                                 key={child.name}
                                 href={child.link}
-                                className="text-[#30241E]/[0.72] text-[15px] font-medium tracking-[0.64px] py-3 pl-[64px] cursor-pointer hover:text-[#30241E] transition-colors duration-200 group"
+                                className={`${child.link === currentPath ? 'text-[#30241E]' : 'text-[#30241E]/[0.72]'} text-[15px] font-medium tracking-[0.64px] py-3 pl-[64px] cursor-pointer hover:text-[#30241E] transition-colors duration-200 group`}
                               >
                                 <span>{child.name}</span>
                               </Link>
@@ -146,6 +152,9 @@ const Sidebar = ({ white = false }) => {
                           <span className="absolute -left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                             <WaterDrop size={16} color="#DA3947" />
                           </span>
+                          {link.link === currentPath && <span className="absolute -left-5">
+                            <WaterDrop size={16} color="#DA3947" />
+                          </span>}
                           <span>{link.name}</span>
                         </div>
                       </Link>
