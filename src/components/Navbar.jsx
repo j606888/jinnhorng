@@ -1,9 +1,10 @@
-import Logo from "./icons/Logo";
+import LogoWithText from "./icons/LogoWithText";
 import Sidebar from "./Sidebar";
 import { useState, useEffect } from "react";
 import clsx from "clsx";
 import WaterDrop from "@/components/icons/WaterDrop";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export const LINKS = [
   {
@@ -12,6 +13,7 @@ export const LINKS = [
   },
   {
     name: "產品系列",
+    link: "/products",
     children: [
       {
         name: "所有產品",
@@ -45,6 +47,7 @@ export const LINKS = [
   },
   {
     name: "品質守護",
+    link: "/quality",
     children: [
       {
         name: "品質控管",
@@ -76,6 +79,7 @@ export const LINKS = [
 
 const Navbar = ({ white = false }) => {
   const [isScolled, setIsScolled] = useState(false);
+  const currentPath = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -101,15 +105,7 @@ const Navbar = ({ white = false }) => {
     >
       <Link href="/">
         <div className="flex items-center gap-2.5">
-          <Logo color={white && !isScolled ? "#fff" : "#DA3947"} />
-          <h1
-            className={clsx(
-              "text-lg font-medium tracking-[3.24px]",
-              white && !isScolled ? "text-white" : "text-[#30241E]"
-            )}
-          >
-            晉弘實業股份有限公司
-          </h1>
+          <LogoWithText white={white && !isScolled} />
         </div>
       </Link>
       <Sidebar white={white && !isScolled} />
@@ -131,6 +127,12 @@ const Navbar = ({ white = false }) => {
                   color={white && !isScolled ? "#fff" : "#DA3947"}
                 />
               </span>
+              {currentPath.includes(link.link) && <span className="absolute -left-5">
+                <WaterDrop
+                  size={16}
+                  color={white && !isScolled ? "#fff" : "#DA3947"}
+                />
+              </span>}
               <span>{link.name}</span>
               <div
                 className={clsx(
@@ -143,7 +145,7 @@ const Navbar = ({ white = false }) => {
                     <Link
                       key={child.name}
                       href={child.link}
-                      className="text-sm text-[#30241E]/[0.72] hover:text-[#30241E] font-medium transition-colors duration-200"
+                      className={`${child.link === currentPath ? 'text-[#30241E]' : 'text-[#30241E]/[0.72]'} text-sm hover:text-[#30241E] font-medium transition-colors duration-200`}
                     >
                       {child.name}
                     </Link>
@@ -168,6 +170,12 @@ const Navbar = ({ white = false }) => {
                   color={white && !isScolled ? "#fff" : "#DA3947"}
                 />
               </span>
+              {link.link === currentPath && <span className="absolute -left-5">
+                <WaterDrop
+                  size={16}
+                  color={white && !isScolled ? "#fff" : "#DA3947"}
+                />
+              </span>}
               <span>{link.name}</span>
             </Link>
           )

@@ -9,7 +9,7 @@ const ScrollMouse = () => {
 
   const handleScroll = () => {
     window.scrollTo({
-      top: 740,
+      top: 660,
       behavior: "smooth",
     });
   };

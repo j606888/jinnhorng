@@ -12,7 +12,7 @@ const ProductCard = ({ name, enName, image, onClick, onMouseEnter, onMouseLeave 
       <div className="bg-white pt-5 px-4 pb-8 w-full flex flex-col items-center">
         <h3 className="text-[#30241E] text-[22px] font-medium tracking-[1.76px] mb-2">{name}</h3>
         <p className="text-[#30241E]/82 tracking-[0.52px] text-[13px] text-center font-medium mb-5">{enName}</p>
-        <CircleButton />
+        <CircleButton className="group-hover:bg-[#DA3947] group-hover:text-white group-active:bg-[#C43340]"/>
       </div>
     </div>
   );

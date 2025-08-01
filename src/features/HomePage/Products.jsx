@@ -116,9 +116,8 @@ const Products = () => {
           產品系列
         </h3>
         <Stroke className="md:w-[120px] md:h-[24px]" />
-        <h2 className="text-[#30241E] text-4xl font-bold tracking-[2.88px] leading-[1.5] mb-3 md:text-[40px] md:tracking-[3.2px] lg:text-[48px] lg:tracking-[3.8px]">
-          匠心淬煉 <br className="block md:hidden" />
-          甜得安心
+        <h2 className="text-deep-brown text-[28px] font-bold tracking-[2.24px] mb-3 md:text-[36px] md:tracking-[2.88px] xl:text-[40px] xl:tracking-[3.2px]">
+          匠心淬煉 甜得安心
         </h2>
         <p className="text-[#30241E]/82 text-center tracking-[0.64px] lg:text-[20px] lg:font-medium lg:tracking-[0.8px]">
           嚴選非基改原料製成，成分單純、穩定性高，
@@ -153,7 +152,7 @@ const Products = () => {
           onClick={next}
         />
       </div>
-      <CtaButton className="m-auto">探索更多產品系列</CtaButton>
+      <CtaButton className="m-auto" url="/products">探索更多產品系列</CtaButton>
       <img
         src="/images/homepage/sugar_bottle.png"
         alt="sugar-bottle"
