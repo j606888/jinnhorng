@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 
 const Hero = () => {
   return (
-    <section className="relative w-full bg-cover bg-center bg-[url('/images/homepage/hero_mobile.jpg')] h-[667px] md:bg-[url('/images/homepage/hero_tablet.jpg')] md:h-[1024px] lg:bg-[url('/images/homepage/hero_desktop.jpg')] lg:h-[768px] xl:h-[800px] overflow-hidden">
+    <section className="relative w-full bg-cover bg-center bg-[url('/images/homepage/hero_mobile.jpg')] h-[667px] md:bg-[url('/images/homepage/hero_tablet.jpg')] md:h-[1024px] lg:bg-[url('/images/homepage/hero_desktop.jpg')] lg:h-[600px] xl:aspect-[2/1] xl:h-auto overflow-hidden">
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}

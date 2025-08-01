@@ -1,4 +1,4 @@
-import Logo from "./icons/Logo";
+import LogoWithText from "./icons/LogoWithText";
 import Sidebar from "./Sidebar";
 import { useState, useEffect } from "react";
 import clsx from "clsx";
@@ -101,15 +101,7 @@ const Navbar = ({ white = false }) => {
     >
       <Link href="/">
         <div className="flex items-center gap-2.5">
-          <Logo color={white && !isScolled ? "#fff" : "#DA3947"} />
-          <h1
-            className={clsx(
-              "text-lg font-medium tracking-[3.24px]",
-              white && !isScolled ? "text-white" : "text-[#30241E]"
-            )}
-          >
-            晉弘實業股份有限公司
-          </h1>
+          <LogoWithText white={white && !isScolled} />
         </div>
       </Link>
       <Sidebar white={white && !isScolled} />

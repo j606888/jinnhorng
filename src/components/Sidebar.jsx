@@ -1,4 +1,4 @@
-import Logo from "./icons/Logo";
+import LogoWithText from "./icons/LogoWithText";
 import X from "./icons/X";
 import Menu from "./icons/Menu";
 import { useState, useEffect, useRef } from "react";
@@ -61,10 +61,7 @@ const Sidebar = ({ white = false }) => {
           >
             <div className="flex justify-between items-center px-6 py-[14px] lg:hidden">
               <div className="flex items-center gap-2.5 ">
-                <Logo width={21.5} height={18} />
-                <h1 className="text-[#30241E] text-[14px] font-medium tracking-[2.5px]">
-                  晉弘實業股份有限公司
-                </h1>
+                <LogoWithText className="w-[170px]" />
               </div>
               <X onClick={() => setIsOpen(false)} />
             </div>
