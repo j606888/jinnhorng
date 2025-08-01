@@ -23,7 +23,7 @@ const ContactUs = () => {
           <br className="hidden md:block" />
           聯絡我們，了解更多產品與合作細節。
         </p>
-        <CtaButton>聯絡我們，專人為您服務</CtaButton>
+        <CtaButton url="/contact">聯絡我們，專人為您服務</CtaButton>
       </motion.div>
     </section>
   );

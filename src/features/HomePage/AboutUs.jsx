@@ -31,7 +31,7 @@ const AboutUs = () => {
           <p className="px-5 text-[#30241E]/82 mb-8 tracking-[0.64px] md:px-15 lg:px-0 lg:text-start lg:tracking-[0.8px]">
             我們專注於果糖（高果糖糖漿）、麥芽糖與轉化液糖的製造，透過嚴謹的製程管理，結合品質控管與國際認證，產品穩定供應國內眾多知名飲料、果汁與冰品品牌，致力成為食品業值得信賴、安心選用的甜味原料夥伴。
           </p>
-          <CtaButton className="mb-8 lg:mb-0">了解我們的理念與初心</CtaButton>
+          <CtaButton className="mb-8 lg:mb-0" url="/about-us">了解我們的理念與初心</CtaButton>
         </motion.div>
         <div className="relative px-[14px] -mb-20 w-full max-w-100 md:px-0 md:-mb-12 lg:absolute lg:top-[44px] lg:left-[-343px] xl:top-[54px] xl:left-[-409px]">
           <div className="w-full h-[476px] overflow-hidden rounded-[12px] shadow-[7px_7px_36px_0px_rgba(0,0,0,0.16)] md:rounded-[6px] md:h-[557px] lg:w-[393px] lg:h-[548px] xl:w-[488px] xl:h-[680px]">

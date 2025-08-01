@@ -153,7 +153,7 @@ const Products = () => {
           onClick={next}
         />
       </div>
-      <CtaButton className="m-auto">探索更多產品系列</CtaButton>
+      <CtaButton className="m-auto" url="/products">探索更多產品系列</CtaButton>
       <img
         src="/images/homepage/sugar_bottle.png"
         alt="sugar-bottle"
