@@ -1,9 +1,24 @@
 export const PRODUCTS = [
   {
-    slug: "Fructose",
+    slug: "fructose",
     name: "果糖（高果糖糖漿）",
     enName: "Fructose (Fructose Syrup）",
+    image: "/images/products/fructose.jpg",
     description: "果糖(高果糖糖漿)，以澱粉為原料，經過酵素水解及轉化後，以果糖及葡萄糖等單醣為主要成份形成之液態糖漿產品。<br /> HFS 55 為市面上最常見之成分，甜度高於一般蔗糖1.2~1.8倍，能以較少用量達到理想甜味，提升配方效益又有良好溶解性與穩定性，因此廣泛應用於食品與飲料產業。",
+    previews: [
+      {
+        name: '25kg 食品級塑膠桶',
+        image: '/images/products/fructose.jpg',
+      },
+      {
+        name: '3kg 食品級塑膠袋',
+        image: '/images/products/fructose_3kg.jpg',
+      },
+      {
+        name: '5kg 食品級塑膠桶',
+        image: '/images/products/fructose_5kg.jpg',
+      },
+    ],
     specifications: [
       {
         name: "外觀",
@@ -33,23 +48,15 @@ export const PRODUCTS = [
     delivery: [
       {
         name: "精巧包裝",
-        packages: [
-          "3kg／食品級塑膠袋",
-          "5kg／食品級塑膠瓶"
-        ]
+        value: "3kg／食品級塑膠袋<br />5kg／食品級塑膠瓶"
       },
       {
         name: "標準包裝",
-        packages: [
-          "25kg、30kg／食品級塑膠桶"
-        ]
+        value: "25kg、30kg／食品級塑膠桶"
       },
       {
         name: "大宗運送規格",
-        packages: [
-          "1200kg／IBC桶",
-          "散裝槽車配送"
-        ]
+        value: "1200kg／IBC桶<br />散裝槽車配送"
       }
     ],
     industries: [
@@ -79,7 +86,22 @@ export const PRODUCTS = [
     slug: "sugar-syrup",
     name: "轉化液糖",
     enName: "Sugar Syrup",
+    image: "/images/products/sugar_syrup.jpg",
     description: "轉化液糖是以蔗糖(砂糖)為原料所製成的液態糖漿，也可稱為甘蔗液糖。<br />主要是將蔗糖溶解後，經水解反應使蔗糖(砂糖)分解成含有葡萄糖、果糖及蔗糖的液態糖漿。<br />轉化液糖的甜度較高，且可保持較少水分不易結晶，因而廣泛應用於食品加工、飲料製造及烘焙等領域。",
+    previews: [
+      {
+        name: '25kg 食品級塑膠桶',
+        image: '/images/products/sugar_syrup.jpg',
+      },
+      {
+        name: '3kg 食品級塑膠袋',
+        image: '/images/products/banana.png',
+      },
+      {
+        name: '5kg 食品級塑膠桶',
+        image: '/images/products/banana.png',
+      },
+    ],
     specifications: [
       {
         name: "外觀",
@@ -105,23 +127,15 @@ export const PRODUCTS = [
     delivery: [
       {
         name: "精巧包裝",
-        packages: [
-          "3kg／食品級塑膠袋",
-          "5kg／食品級塑膠瓶"
-        ]
+        value: "3kg／食品級塑膠袋<br />5kg／食品級塑膠瓶"
       },
       {
         name: "標準包裝",
-        packages: [
-          "25kg、30kg／食品級塑膠桶"
-        ]
+        value: "25kg、30kg／食品級塑膠桶"
       },
       {
         name: "大宗運送規格", 
-        packages: [
-          "1200kg／IBC桶",
-          "散裝槽車配送"
-        ]
+        value: "1200kg／IBC桶<br />散裝槽車配送"
       }
     ],
     industries: [
@@ -151,7 +165,22 @@ export const PRODUCTS = [
     slug: "maltose-syrup",
     name: "麥芽糖漿",
     enName: "Maltose Syrup",
+    image: "/images/products/maltose_syrup.jpg",
     description: "麥芽糖漿以澱粉為原料，經酵素水解後製成的高黏度糖漿。<br />麥芽糖甜度約為蔗糖的 30%～50%，甜度適中又不搶味，能有效提升產品整體風味協調，並具有良好的保濕性與抗結晶性。<br />因此廣泛應用於烘焙、糖果、飲料與醬料加工等各大食品產業中。",
+    previews: [
+      {
+        name: '25kg 食品級塑膠桶',
+        image: "/images/products/maltose_syrup.jpg",
+      },
+      {
+        name: '3kg 食品級塑膠袋',
+        image: '/images/products/banana.png',
+      },
+      {
+        name: '5kg 食品級塑膠桶',
+        image: '/images/products/banana.png',
+      },
+    ],
     specifications: [
       {
         name: "外觀",
@@ -181,15 +210,11 @@ export const PRODUCTS = [
     delivery: [
       {
         name: "標準包裝",
-        packages: [
-          "25kg、30kg／食品級塑膠桶"
-        ]
+        value: "25kg、30kg／食品級塑膠桶"
       },
       {
         name: "大宗運送規格",
-        packages: [
-          "散裝槽車配送"
-        ]
+        value: "散裝槽車配送"
       },
     ],
     industries: [
@@ -219,7 +244,22 @@ export const PRODUCTS = [
     slug: "flavored-syrup",
     name: "龍眼風味糖漿",
     enName: "Flavored Syrup",
+    image: "/images/products/flavored_syrup.jpg",
     description: "風味糖漿是以客戶需求而調製而成的風味糖漿。<br />本產品專為食品與飲品產業開發，提供穩定、標準化的風味來源，可快速融入各類冷熱飲、冰品、甜點與醬料配方中，提升口感層次與品牌風味辨識度。",
+    previews: [
+      {
+        name: '25kg 食品級塑膠桶',
+        image: "/images/products/flavored_syrup.jpg",
+      },
+      {
+        name: '3kg 食品級塑膠袋',
+        image: '/images/products/banana.png',
+      },
+      {
+        name: '5kg 食品級塑膠桶',
+        image: '/images/products/banana.png',
+      },
+    ],
     specifications: [
       {
         name: "外觀",
@@ -245,10 +285,7 @@ export const PRODUCTS = [
     delivery: [
       {
         name: "食品級瓶裝",
-        packages: [
-          "2.25kg／食品級塑膠瓶",
-          "3kg／食品級塑膠瓶"
-        ]
+        value: "2.25kg／食品級塑膠瓶<br />3kg／食品級塑膠瓶"
       },
     ],
     industries: [
@@ -274,7 +311,22 @@ export const PRODUCTS = [
     slug: "dextrose-monohydrate",
     name: "特級結晶葡萄糖",
     enName: "Dextrose monohydrate",
+    image: "/images/products/dextrose_monohydrate.jpg",
     description: "特級結晶葡萄糖，由澱粉水解並經過精緻結晶製成，純度99%以上，呈白色結晶狀粉末，溶於水，無異味，因此廣泛應用於食品、飲料、蜜餞與果乾、糖果製造產業中。",
+    previews: [
+      {
+        name: '25kg 食品級塑膠桶',
+        image: "/images/products/dextrose_monohydrate.jpg",
+      },
+      {
+        name: '3kg 食品級塑膠袋',
+        image: '/images/products/banana.png',
+      },
+      {
+        name: '5kg 食品級塑膠桶',
+        image: '/images/products/banana.png',
+      },
+    ],
     specifications: [
       {
         name: "外觀",
@@ -304,8 +356,7 @@ export const PRODUCTS = [
     delivery: [
       {
         name: "大宗粉體包裝",
-        packages: [
-        ]
+        value: "20kg／紙箱<br />25kg／紙箱"
       },
     ],
     industries: [

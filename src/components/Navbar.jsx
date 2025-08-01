@@ -23,7 +23,7 @@ export const LINKS = [
       },
       {
         name: "轉化液糖",
-        link: "/products/conversion-liquid-sugar",
+        link: "/products/sugar-syrup",
       },
       {
         name: "麥芽糖漿",
@@ -31,11 +31,11 @@ export const LINKS = [
       },
       {
         name: "龍眼風味糖漿",
-        link: "/products/longan-flavor-syrup",
+        link: "/products/flavored-syrup",
       },
       {
         name: "特級結晶葡萄糖",
-        link: "/products/super-crystalline-glucose",
+        link: "/products/dextrose-monohydrate",
       },
     ],
   },
