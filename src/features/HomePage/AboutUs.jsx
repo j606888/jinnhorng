@@ -1,16 +1,12 @@
 import CtaButton from "@/components/CtaButton";
 import Stroke from "@/components/icons/Stroke";
-import { motion } from "motion/react";
+import AnimateDiv from "@/features/shared/AnimateDiv";
 
 const AboutUs = () => {
   return (
     <section className="px-5 pt-10 pb-[120px] md:px-10 md:pb-[84px] lg:py-[96px] lg:flex lg:justify-center lg:items-center xl:py-20">
       <div className=" bg-[#F8F4EB] pt-[70px] text-center flex flex-col items-center relative md:pt-[60px] lg:pt-[58px] lg:pl-[91px] lg:pr-[42px] lg:w-[541px] lg:ml-[343px] lg:pb-[60px] lg:h-[633px] xl:w-[672px] xl:h-[785px] xl:pt-[104px] xl:pl-[173px] xl:pr-[91px] xl:ml-[409px]">
-        <motion.div
-          initial={{ opacity: 0, y: 100 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.3 }}
-          viewport={{ once: true }}
+        <AnimateDiv
           className="flex flex-col items-center lg:items-start relative w-full"
         >
           <div className="mb-2">
@@ -32,7 +28,7 @@ const AboutUs = () => {
             我們專注於果糖（高果糖糖漿）、麥芽糖與轉化液糖的製造，透過嚴謹的製程管理，結合品質控管與國際認證，產品穩定供應國內眾多知名飲料、果汁與冰品品牌，致力成為食品業值得信賴、安心選用的甜味原料夥伴。
           </p>
           <CtaButton className="mb-8 lg:mb-0" url="/about-us">了解我們的理念與初心</CtaButton>
-        </motion.div>
+        </AnimateDiv>
         <div className="relative px-[14px] -mb-20 w-full max-w-100 md:px-0 md:-mb-12 lg:absolute lg:top-[44px] lg:left-[-343px] xl:top-[54px] xl:left-[-409px]">
           <div className="w-full h-[476px] overflow-hidden rounded-[12px] shadow-[7px_7px_36px_0px_rgba(0,0,0,0.16)] md:rounded-[6px] md:h-[557px] lg:w-[393px] lg:h-[548px] xl:w-[488px] xl:h-[680px]">
             <img src="/images/homepage/syrup.jpg" className="w-full h-full object-cover transition-transform duration-1000 hover:scale-102" />

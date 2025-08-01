@@ -1,4 +1,5 @@
 import { useState } from "react";
+import AnimateDiv from "@/features/shared/AnimateDiv";
 
 const ContainerClass = "px-5 md:px-10 lg:px-15 max-w-[1080px] mx-auto xl:px-0"
 const TABS = [
@@ -21,7 +22,7 @@ const Detail = ({ product }) => {
 
   return (
     <section>
-      <div className={`py-12 ${ContainerClass}`}>
+      <AnimateDiv className={`py-12 ${ContainerClass}`}>
         <div className="flex items-center justify-center mb-2.5 md:mb-4">
           {TABS.map((tab) => (
             <div key={tab.key} className={`text-sm font-bold tracking-[0.56px] px-4 py-3 border-b-3  cursor-pointer md:w-[150px] text-center ${activeTab === tab.key ? 'border-[#DA3947] text-deep-brown' : 'text-deep-brown/[0.6] border-transparent'}`} onClick={() => setActiveTab(tab.key)}>
@@ -37,7 +38,7 @@ const Detail = ({ product }) => {
             </div>
           ))}
         </div>
-      </div>
+      </AnimateDiv>
       <div className="h-2 bg-[#F8F7F7] md:hidden"></div>
     </section>
   );

@@ -1,3 +1,5 @@
+import AnimateDiv from "@/features/shared/AnimateDiv";
+
 const SERVICE_DATA = [
   {
     image: "/images/logistics/logistics1.png",
@@ -24,12 +26,12 @@ const SERVICE_DATA = [
 const Service = () => {
   return (
     <section>
-      <div className="flex gap-2 px-5 py-4 text-sm tracking-[0.84px] font-normal text-[#30241E] lg:px-25 max-w-[1080px] mx-auto xl:px-15">
+      <AnimateDiv className="flex gap-2 px-5 py-4 text-sm tracking-[0.84px] font-normal text-[#30241E] lg:px-25 max-w-[1080px] mx-auto xl:px-15">
         <span>首頁</span>
         <span>{">"}</span>
         <span className="font-bold">物流服務</span>
-      </div>
-      <div className="flex flex-col px-5 py-15 text-center md:px-10 lg:px-15 lg:py-20 lg:pb-15 max-w-[1080px] mx-auto">
+      </AnimateDiv>
+      <AnimateDiv className="flex flex-col px-5 py-15 text-center md:px-10 lg:px-15 lg:py-20 lg:pb-15 max-w-[1080px] mx-auto">
         <h2 className="mb-4 text-[28px] text-deep-brown font-bold tracking-[2.24px]">
           工廠直送，打造高效穩健的供應鏈支持
         </h2>
@@ -45,8 +47,8 @@ const Service = () => {
             <img src="/images/logistics/truck-2.jpg" alt="truck-2" className="w-full h-full object-cover hover:scale-102 transition-all duration-300" />
           </div>
         </div>
-      </div>
-      <div className="flex flex-col px-5 md:px-10 lg:px-15 max-w-[1080px] mx-auto">
+      </AnimateDiv>
+      <AnimateDiv className="flex flex-col px-5 md:px-10 lg:px-15 max-w-[1080px] mx-auto">
         <h2 className="mb-10 text-[28px] text-deep-brown font-bold tracking-[2.24px] text-center">
           從出貨到交付，我們的專業保障
         </h2>
@@ -59,7 +61,7 @@ const Service = () => {
             </div>
           ))}
         </div>
-      </div>
+      </AnimateDiv>
     </section>
   );
 };

@@ -1,7 +1,7 @@
 import Stroke from "@/components/icons/Stroke";
 import RoundCheck from "@/components/icons/RoundCheck";
 import CtaButton from "@/components/CtaButton";
-import { motion } from "motion/react";
+import AnimateDiv from "@/features/shared/AnimateDiv";
 
 const QUALITIES = [
   {
@@ -21,13 +21,7 @@ const Quality = () => {
   return (
     <section className="bg-[#2F2B26] bg-[url('/images/homepage/spoon_bg_mobile.jpg')] bg-contain bg-no-repeat md:bg-[url('/images/homepage/spoon_bg_desktop.png')] md:bg-center md:bg-cover xl:bg-contain">
       <div className="px-5 py-15 md:px-10 md:py-9 lg:px-15 ">
-        <motion.div
-          initial={{ opacity: 0, y: 100 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.3 }}
-          viewport={{ once: true }}
-          className="mb-14 flex flex-col items-center text-center md:px-[34px] md:mb-20"
-        >
+        <AnimateDiv className="mb-14 flex flex-col items-center text-center md:px-[34px] md:mb-20">
           <h3 className="text-white font-semibold tracking-[0.96px] mb-1 md:text-xl">
             QUALITY COMMITMENT
           </h3>
@@ -41,8 +35,8 @@ const Quality = () => {
           <p className="text-white text-center tracking-[0.64px] lg:text-[20px] lg:font-medium lg:tracking-[0.8px] lg:w-[664px]">
             我們層層把關每一環節，搭配專業製糖工序與實驗室級品質控管，只為提供穩定、安心的甜味原料。
           </p>
-        </motion.div>
-        <div className="flex flex-col items-center justify-center gap-10 mb-14 md:flex-row md:gap-4 md:mb-20 lg:gap-5 xl:gap-6">
+        </AnimateDiv>
+        <AnimateDiv className="flex flex-col items-center justify-center gap-10 mb-14 md:flex-row md:gap-4 md:mb-20 lg:gap-5 xl:gap-6">
           {QUALITIES.map((quality) => (
             <div
               key={quality.description}
@@ -63,8 +57,10 @@ const Quality = () => {
               </div>
             </div>
           ))}
-        </div>
-        <CtaButton className="m-auto" url="/quality/control">了解我們的製程與認證</CtaButton>
+        </AnimateDiv>
+        <CtaButton className="m-auto" url="/quality/control">
+          了解我們的製程與認證
+        </CtaButton>
       </div>
     </section>
   );
