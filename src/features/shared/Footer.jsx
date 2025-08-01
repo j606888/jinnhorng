@@ -1,9 +1,10 @@
 import Logo from "@/components/icons/Logo";
+import Link from "next/link";
 
 const FOOTER_LINKS = [
   {
     title: '關於我們',
-    link: '/about-us',
+    link: '/about',
   },
   {
     title: '產品系列',
@@ -11,7 +12,7 @@ const FOOTER_LINKS = [
   },
   {
     title: '品質守護',
-    link: '/quality',
+    link: '/quality/control',
   },
   {
     title: '常見問題',
@@ -19,7 +20,7 @@ const FOOTER_LINKS = [
   },
   {
     title: '聯絡我們',
-    link: '/about-us',
+    link: '/contact',
   },
 ]
 
@@ -33,9 +34,9 @@ const Footer = () => {
         </div>
         <div className="flex flex-wrap gap-y-6 w-full md:flex-nowrap md:gap-10 md:justify-center lg:flex-col lg:items-start lg:gap-5 lg:w-[257px]">
           {FOOTER_LINKS.map((link) => (
-            <div key={link.title} className="w-[50%] md:w-auto">
+            <Link href={link.link} key={link.title} className="w-[50%] md:w-auto">
               <p className="text-[#ffffff]/92 font-medium tracking-[0.64px] md:text-sm">{link.title}</p>
-            </div>
+            </Link>
           ))}
         </div>
         <div className="flex flex-col gap-2.5 md:w-[450px] md:text-sm lg:w-[257px] lg:flex-shrink-0">
