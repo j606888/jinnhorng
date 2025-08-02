@@ -106,7 +106,7 @@ const Navbar = ({ white = false }) => {
     >
       <Link href="/">
         <div className="flex items-center gap-2.5">
-          <LogoWithText white={white && !isScolled} />
+          <LogoWithText white={white && !isScolled} className="w-[220px] md:w-[240px] lg:w-[260px] xl:w-[280px]" />
         </div>
       </Link>
       <Sidebar white={white && !isScolled} />

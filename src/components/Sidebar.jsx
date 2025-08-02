@@ -64,7 +64,7 @@ const Sidebar = ({ white = false }) => {
           >
             <div className="flex justify-between items-center px-6 py-[14px] lg:hidden">
               <div className="flex items-center gap-2.5 ">
-                <LogoWithText className="w-[170px]" />
+                <LogoWithText className="w-[180px]" />
               </div>
               <X onClick={() => setIsOpen(false)} />
             </div>
