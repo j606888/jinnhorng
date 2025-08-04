@@ -5,34 +5,7 @@ import { useState, useEffect } from "react";
 import ArrowLarge from "@/components/icons/ArrowLarge";
 import { clsx } from "clsx";
 import AnimateDiv from "@/features/shared/AnimateDiv";
-
-export const PRODUCTS = [
-  {
-    name: "果糖(高果糖糖漿)",
-    enName: "Fructose (Fructose Syrup)",
-    image: "/images/products/fructose.jpg",
-  },
-  {
-    name: "轉化液糖",
-    enName: "Sugar Syrup",
-    image: "/images/products/sugar_syrup.jpg",
-  },
-  {
-    name: "麥芽糖漿",
-    enName: "Maltose Syrup",
-    image: "/images/products/maltose_syrup.jpg",
-  },
-  {
-    name: "龍眼風味糖漿",
-    enName: "Flavored Syrup",
-    image: "/images/products/flavored_syrup.jpg",
-  },
-  {
-    name: "特級結晶葡萄糖",
-    enName: "Dextrose monohydrate",
-    image: "/images/products/dextrose_monohydrate.jpg",
-  },
-];
+import { PRODUCTS } from "@/lib/products";
 
 const Products = () => {
   const [index, setIndex] = useState(1);
@@ -124,7 +97,7 @@ const Products = () => {
       <AnimateDiv className="flex flex-col items-center px-[37.5px] gap-4 mb-14 z-2 relative md:flex-row lg:justify-center lg:gap-[18px] xl:gap-14 xl:mb-20">
         <div className="flex flex-col md:hidden gap-4">
           {PRODUCTS.map((product) => (
-            <ProductCard key={product.name} {...product} />
+            <ProductCard key={product.name} product={product} />
           ))}
         </div>
         <CircleButton
@@ -139,7 +112,7 @@ const Products = () => {
             style={{ transform: `translateX(-${translateX}px)` }}
           >
             {extendedProducts.map((product, idx) => (
-              <ProductCard key={`${product.name}-${idx}`} {...product} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} />
+              <ProductCard key={`${product.name}-${idx}`} product={product} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} />
             ))}
           </div>
         </div>
