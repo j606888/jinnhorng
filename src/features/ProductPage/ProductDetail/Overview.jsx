@@ -3,6 +3,7 @@ import { useState } from "react";
 import ButtonNext from "./ButtonNext";
 import ButtonPrevious from "./ButtonPrevious";
 import AnimateDiv from "@/features/shared/AnimateDiv";
+import Breadcrumb from "../Breadcrumb";
 
 const ContainerClass = "px-5 md:px-10 lg:px-15 max-w-[1080px] mx-auto xl:px-0";
 
@@ -15,11 +16,7 @@ const Overview = ({ product }) => {
       <AnimateDiv
         className={`flex gap-2 py-4 text-sm tracking-[0.84px] font-normal text-[#30241E] ${ContainerClass}`}
       >
-        <span>首頁</span>
-        <span>{">"}</span>
-        <span>產品系列</span>
-        <span>{">"}</span>
-        <span className="font-bold">{product.name}</span>
+        <Breadcrumb>{product.name}</Breadcrumb>
       </AnimateDiv>
       <AnimateDiv className={`flex flex-col gap-10 py-9 ${ContainerClass} md:flex-row xl:gap-15`}>
         <div className="md:w-1/2 xl:flex-shrink-0 xl:w-auto">
