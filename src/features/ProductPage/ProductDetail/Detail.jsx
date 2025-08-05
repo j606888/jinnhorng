@@ -25,7 +25,7 @@ const Detail = ({ product }) => {
       <AnimateDiv className={`py-12 ${ContainerClass}`}>
         <div className="flex items-center justify-center mb-2.5 md:mb-4">
           {TABS.map((tab) => (
-            <div key={tab.key} className={`text-sm font-bold tracking-[0.56px] px-4 py-3 border-b-3  cursor-pointer md:w-[150px] text-center ${activeTab === tab.key ? 'border-[#DA3947] text-deep-brown' : 'text-deep-brown/[0.6] border-transparent'}`} onClick={() => setActiveTab(tab.key)}>
+            <div key={tab.key} className={`text-sm font-bold tracking-[0.56px] px-4 py-3 border-b-3  cursor-pointer md:w-[150px] text-center ${activeTab === tab.key ? 'border-[#DA3947] text-deep-brown' : 'text-deep-brown/[0.6] border-transparent hover:text-deep-brown'}`} onClick={() => setActiveTab(tab.key)}>
               {tab.label}
             </div>
           ))}

@@ -20,7 +20,11 @@ export const PRODUCTS = [
       },
       {
         name: '30kg 食品級塑膠桶',
-        image: '/images/products/banana.png',
+        image: '/images/products/fructose_30kg.jpg',
+      },
+      {
+        name: '1200kg /IBC 桶',
+        image: '/images/products/fructose_1200kg.jpg',
       },
     ],
     specifications: [
@@ -109,6 +113,10 @@ export const PRODUCTS = [
         name: '30kg 食品級塑膠桶',
         image: '/images/products/sugar_syrup_30kg.jpg',
       },
+      {
+        name: '1200kg /IBC 桶',
+        image: '/images/products/sugar_syrup_1200kg.jpg',
+      },
     ],
     specifications: [
       {
@@ -177,16 +185,20 @@ export const PRODUCTS = [
     description: "麥芽糖漿以澱粉為原料，經酵素水解後製成的高黏度糖漿。<br />麥芽糖甜度約為蔗糖的 30%～50%，甜度適中又不搶味，能有效提升產品整體風味協調，並具有良好的保濕性與抗結晶性。<br />因此廣泛應用於烘焙、糖果、飲料與醬料加工等各大食品產業中。",
     previews: [
       {
-        name: '75% 麥芽糖漿',
+        name: '75% 麥芽糖漿 / 30kg 食品級塑膠桶',
         image: "/images/products/maltose_syrup.jpg",
       },
       {
+        name: '75% 麥芽糖漿 / 35kg 食品級塑膠桶',
+        image: "/images/products/maltose_syrup_75_35kg.jpg",
+      },
+      {
         name: '85%麥芽糖 / 25kg 食品級餅桶',
-        image: '/images/products/banana.png',
+        image: '/images/products/maltose_syrup_85_25kg.jpg',
       },
       {
         name: '85%麥芽糖 / 30kg 食品級塑膠桶',
-        image: '/images/products/banana.png',
+        image: '/images/products/maltose_syrup_85_30kg.jpg',
       },
     ],
     specifications: [
@@ -256,16 +268,8 @@ export const PRODUCTS = [
     description: "風味糖漿是以客戶需求而調製而成的風味糖漿。<br />本產品專為食品與飲品產業開發，提供穩定、標準化的風味來源，可快速融入各類冷熱飲、冰品、甜點與醬料配方中，提升口感層次與品牌風味辨識度。",
     previews: [
       {
-        name: '25kg 食品級塑膠桶',
+        name: '3kg 食品級塑膠瓶',
         image: "/images/products/flavored_syrup.jpg",
-      },
-      {
-        name: '3kg 食品級塑膠袋',
-        image: '/images/products/banana.png',
-      },
-      {
-        name: '5kg 食品級塑膠桶',
-        image: '/images/products/banana.png',
       },
     ],
     specifications: [
@@ -323,16 +327,8 @@ export const PRODUCTS = [
     description: "特級結晶葡萄糖，由澱粉水解並經過精緻結晶製成，純度99%以上，呈白色結晶狀粉末，溶於水，無異味，因此廣泛應用於食品、飲料、蜜餞與果乾、糖果製造產業中。",
     previews: [
       {
-        name: '25kg 食品級塑膠桶',
+        name: '20kg~25kg / PE 內袋 + 紙袋外包',
         image: "/images/products/dextrose_monohydrate.jpg",
-      },
-      {
-        name: '3kg 食品級塑膠袋',
-        image: '/images/products/banana.png',
-      },
-      {
-        name: '5kg 食品級塑膠桶',
-        image: '/images/products/banana.png',
       },
     ],
     specifications: [
