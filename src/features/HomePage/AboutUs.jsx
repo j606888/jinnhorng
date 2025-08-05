@@ -1,6 +1,6 @@
 import CtaButton from "@/components/CtaButton";
-import Stroke from "@/components/icons/Stroke";
 import AnimateDiv from "@/features/shared/AnimateDiv";
+import Subtitle from "./Subtitle";
 
 const AboutUs = () => {
   return (
@@ -10,13 +10,7 @@ const AboutUs = () => {
           className="flex flex-col items-center lg:items-start relative w-full"
         >
           <div className="mb-2">
-            <h3 className="text-[#604C2B]/50 font-semibold tracking-[0.96px] mb-1 md:text-xl font-ar">
-              ABOUT US
-            </h3>
-            <h3 className="text-[#30241E]/70 text-xl font-bold tracking-[4px] md:text-2xl md:tracking-[4.8px]">
-              關於我們
-            </h3>
-            <Stroke className="md:w-[120px] md:h-[24px]" />
+            <Subtitle enTitle="ABOUT US" cnTitle="關於我們" />
           </div>
           <h2 className="text-deep-brown text-[28px] font-bold tracking-[2.24px] mb-8 md:text-[36px] md:tracking-[2.88px] xl:text-[40px] xl:tracking-[3.2px]">
             從原料到製程
@@ -27,7 +21,7 @@ const AboutUs = () => {
           <p className="px-5 text-deep-brown/82 mb-8 tracking-[0.64px] md:px-15 lg:px-0 lg:text-start lg:tracking-[0.8px]">
             我們專注於果糖（高果糖糖漿）、麥芽糖與轉化液糖的製造，透過嚴謹的製程管理，結合品質控管與國際認證，產品穩定供應國內眾多知名飲料、果汁與冰品品牌，致力成為食品業值得信賴、安心選用的甜味原料夥伴。
           </p>
-          <CtaButton className="mb-8 lg:mb-0" url="/about-us">了解我們的理念與初心</CtaButton>
+          <CtaButton className="mb-8 lg:mb-0" url="/about">了解我們的理念與初心</CtaButton>
         </AnimateDiv>
         <div className="relative px-[14px] -mb-20 w-full max-w-100 md:px-0 md:-mb-12 lg:absolute lg:top-[44px] lg:left-[-343px] xl:top-[54px] xl:left-[-409px]">
           <div className="w-full h-[476px] overflow-hidden rounded-[12px] shadow-[7px_7px_36px_0px_rgba(0,0,0,0.16)] md:rounded-[6px] md:h-[557px] lg:w-[393px] lg:h-[548px] xl:w-[488px] xl:h-[680px]">

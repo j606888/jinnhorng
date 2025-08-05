@@ -2,7 +2,7 @@ import AnimateDiv from "../shared/AnimateDiv";
 
 const Quality = () => {
   return (
-    <AnimateDiv className="px-10 py-20 bg-[#F7F3F2] relative">
+    <AnimateDiv className="px-0 py-20 bg-[#F7F3F2] relative">
       <h3 className="text-deep-brown text-[28px] font-bold tracking-[2.24px] text-center">
         成就品質、用心為本
         <br />

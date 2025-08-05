@@ -17,7 +17,7 @@ const ProductCard = ({ product, onMouseEnter, onMouseLeave }) => {
         <img
           src={product.image}
           alt={product.name}
-          className="h-full w-full object-cover group-hover:scale-102 transition-transform duration-1000"
+          className="h-full w-full object-cover group-hover:scale-102 transition-transform duration-600"
         />
       </div>
       <div className="bg-white pt-5 px-4 pb-8 w-full flex flex-col items-center">

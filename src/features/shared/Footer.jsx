@@ -26,11 +26,11 @@ const FOOTER_LINKS = [
 
 const Footer = () => {
   return (
-    <footer className="relative pt-10 pr-10 pb-[140px] pl-6 bg-[#2B2623] md:px-[20px] md:pb-30 lg:px-15 lg:py-18">
+    <footer className="relative pt-10 px-6 pb-[140px] bg-[#2B2623] md:px-[20px] md:pb-30 lg:px-15 lg:py-18">
       <div className="relative flex flex-col gap-10 max-w-[1080px] mx-auto md:items-center lg:flex-row lg:items-start lg:gap-0">
         <div className="flex gap-3 items-center md:justify-center lg:flex-col lg:items-start lg:w-[289px] lg:flex-shrink-0 lg:gap-[15px] lg:mr-auto">
-          <Logo className="w-[35px] h-[29px] lg:w-[52px] lg:h-[42px]" />
-          <h4 className="text-white text-[22px] font-medium tracking-[4px] lg:text-[20px] lg:tracking-[0.8px]">晉弘實業股份有限公司</h4>
+          <Logo className="w-[31px] h-[26px] lg:w-[52px] lg:h-[42px]" />
+          <h4 className="text-white text-[18px] font-medium tracking-[4px] lg:text-[20px] lg:tracking-[0.8px]">晉弘實業股份有限公司</h4>
         </div>
         <div className="flex flex-wrap gap-y-6 w-full md:flex-nowrap md:gap-10 md:justify-center lg:flex-col lg:items-start lg:gap-5 lg:w-[257px]">
           {FOOTER_LINKS.map((link) => (
