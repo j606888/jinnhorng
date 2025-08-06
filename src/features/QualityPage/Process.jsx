@@ -120,10 +120,10 @@ const Control = () => {
             {PRODUCTS.map((product) => (
               <div
                 key={product.id}
-                className={`px-5 py-3 text-[14px] text-deep-brown/[0.82] tracking-[0.56px] cursor-pointer rounded-[8px] hover:bg-[#E0E0E0]/[0.5] ${
+                className={`px-5 py-3 text-[14px]  tracking-[0.56px] cursor-pointer rounded-[8px] hover:bg-[#E0E0E0]/[0.5] ${
                   product.id === selectedProductId
-                    ? "bg-[#E0E0E0]/[0.5] font-bold"
-                    : ""
+                    ? "bg-[#E0E0E0]/[0.5] font-bold text-deep-brown"
+                    : "text-deep-brown/[0.82]"
                 }`}
                 onClick={() => handleProductSelect(product.id)}
               >

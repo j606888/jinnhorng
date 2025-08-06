@@ -2,7 +2,7 @@ import AnimateDiv from "../shared/AnimateDiv";
 
 const EveryStep = () => {
   return (
-    <section className="relative">
+    <section className="relative overflow-hidden">
       <div className="px-5 py-20 relative md:px-10 md:pt-15 md:pb-25 lg:px-15 lg:py-20 max-w-[1080px] mx-auto xl:px-0 xl:pt-25 xl:pb-30">
         <div className="flex flex-col gap-20 z-2 lg:gap-15">
           <AnimateDiv className="flex flex-col gap-10 lg:items-center lg:flex-row-reverse lg:gap-15">
@@ -15,11 +15,18 @@ const EveryStep = () => {
                 在追求卓越與永續發展的道路上，我們始終秉持「安全衛生、誠信踏實、服務至上」的核心理念。本著專業、可靠、以客為尊的精神，結合多元創新與客製化的產品與服務，對品質的堅持與對客戶的承諾，從產能提升、流程控管，到產品研發與服務執行，我們以嚴謹態度落實每一個環節，確保高效穩定的產能，回應客戶的期待與信任。
               </p>
             </div>
-            <div className="h-[250px] w-full max-w-[432px] rounded-[10px] overflow-hidden md:h-[318px] md:w-[432px] mx-auto lg:w-full xl:w-[500px] xl:h-[368px] xl:flex-shrink-0 xl:max-w-none">
+            <div className="w-full max-w-[432px] md:h-[318px] md:w-[432px] mx-auto lg:h-auto lg:w-full xl:w-[500px] xl:h-[368px] xl:flex-shrink-0 xl:max-w-none relative">
+              <div className="overflow-hidden rounded-[10px]">
+                <img
+                  src="/images/about/employee.jpg"
+                  alt="employee"
+                  className="w-full h-full object-cover hover:scale-102 transition-all duration-300"
+                />
+              </div>
               <img
-                src="/images/about/employee.jpg"
-                alt="employee"
-                className="w-full h-full object-cover hover:scale-102 transition-all duration-300"
+                src="/images/about/about_us_circle.png"
+                alt="about_us_circle"
+                className="absolute -bottom-[40px] right-[20px] w-[78px] -z-10  md:w-[95px] md:-bottom-[48px] md:-right-[48px] lg:w-[75px] lg:-bottom-[37px] lg:-right-[37px] xl:w-[95px] xl:-bottom-[43px] xl:-right-[47px]"
               />
             </div>
           </AnimateDiv>
@@ -48,11 +55,6 @@ const EveryStep = () => {
           </AnimateDiv>
         </div>
       </div>
-      <img
-        src="/images/about/about_us_circle.png"
-        alt="about_us_circle"
-        className="absolute top-[614px] right-[39px] w-[78px] -z-10 md:top-[519px] md:right-[121px] md:w-[95px] lg:left-[444px] lg:top-[353px] lg:w-[75px] xl:left-[548px] xl:top-[435px] xl:w-[95px]"
-      />
       <img
         src="/images/about/graphic1.png"
         alt="graphic1"

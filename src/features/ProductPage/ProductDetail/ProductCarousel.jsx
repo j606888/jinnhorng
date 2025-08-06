@@ -8,17 +8,13 @@ const CARD_WIDTH_MAP = {
   lg: 337,
   xl: 273,
 };
+const RIGHT_DISABLED_INDEX = {
+  md: 2,
+  lg: 2,
+  xl: 1,
+}
 const ProductCarousel = ({ products }) => {
-  const [index, setIndex] = useState(1);
-  const [isTransitioning, setIsTransitioning] = useState(true);
-
-  const extendedProducts = [
-    products[products.length - 2],
-    products[products.length - 1],
-    ...products,
-    products[0],
-    products[1],
-  ];
+  const [index, setIndex] = useState(0);
 
   const next = () => {
     setIndex((prev) => prev + 1);
@@ -27,22 +23,6 @@ const ProductCarousel = ({ products }) => {
   const prev = () => {
     setIndex((prev) => prev - 1);
   };
-
-  useEffect(() => {
-    if (index === extendedProducts.length - 2) {
-      setTimeout(() => {
-        setIsTransitioning(false);
-        setIndex(2);
-        setTimeout(() => setIsTransitioning(true), 50);
-      }, 300);
-    } else if (index === 1) {
-      setTimeout(() => {
-        setIsTransitioning(false);
-        setIndex(products.length - 1);
-        setTimeout(() => setIsTransitioning(true), 50);
-      }, 300);
-    }
-  }, [index, extendedProducts.length]);
 
   const [screenSize, setScreenSize] = useState("md");
 
@@ -75,33 +55,30 @@ const ProductCarousel = ({ products }) => {
   return (
     <section className="relative overflow-hidden">
       <div className="flex flex-col items-center px-[37.5px] gap-4  z-2 relative md:flex-row lg:justify-center lg:gap-[18px] xl:gap-14">
-        <CircleButton direction="left" onClick={prev} />
+        <CircleButton direction="left" onClick={prev} disabled={index === 0} />
         <div className="md:overflow-hidden w-[524px] mx-auto lg:w-[710px] lg:mx-0 xl:w-[891px]">
           <div
-            className={`md:flex gap-9 ${
-              isTransitioning ? "transition-all duration-300" : ""
-            }`}
+            className='md:flex gap-9 transition-all duration-300'
             style={{ transform: `translateX(-${translateX}px)` }}
           >
-            {extendedProducts.map((product, idx) => (
-              <ProductCard key={`${product.slug}-${idx}`} product={product} />
+            {products.map((product) => (
+              <ProductCard key={product.slug} product={product} />
             ))}
           </div>
         </div>
-        <CircleButton direction="right" onClick={next} />
+        <CircleButton direction="right" onClick={next} disabled={index === RIGHT_DISABLED_INDEX[screenSize]} />
       </div>
     </section>
   );
 };
 
-const CircleButton = ({ direction = "right", onClick = () => {} }) => {
+const CircleButton = ({ direction = "right", onClick = () => {}, disabled = false }) => {
   return (
     <div
-      onClick={onClick}
+      onClick={disabled ? null : onClick}
       className={clsx(
-        "hidden bg-white transition-all duration-300 cursor-pointer md:flex items-center justify-center rounded-[100px] w-[60px] h-[60px] drop-shadow-[0px_8px_15.9px_rgba(0,0,0,0.12)]",
-        "hover:bg-[#DA3947] hover:text-white",
-        "active:bg-[#C43340]"
+        "hidden bg-white transition-all duration-300  md:flex items-center justify-center rounded-[100px] w-[60px] h-[60px] drop-shadow-[0px_8px_15.9px_rgba(0,0,0,0.12)]",
+        disabled ? "opacity-50 cursor-not-allowed" : "cursor-pointer hover:bg-[#DA3947] hover:text-white active:bg-[#C43340]",
       )}
     >
       <ArrowLarge className={clsx(direction === "left" && "scale-x-[-1]")} />

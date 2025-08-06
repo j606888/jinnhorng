@@ -25,7 +25,7 @@ const SERVICE_DATA = [
 
 const Service = () => {
   return (
-    <section>
+    <section className="relative overflow-x-clip">
       <AnimateDiv className="flex gap-2 px-5 py-4 text-sm tracking-[0.84px] font-normal text-[#30241E] lg:px-25 max-w-[1080px] mx-auto xl:px-15">
         <span>首頁</span>
         <span>{">"}</span>
@@ -52,14 +52,16 @@ const Service = () => {
         <h2 className="mb-10 text-[28px] text-deep-brown font-bold tracking-[2.24px] text-center">
           從出貨到交付，我們的專業保障
         </h2>
-        <div className="flex flex-col gap-5 relative md:flex-row md:flex-wrap md:w-full">
+        <div className="flex flex-col gap-5 relative md:flex-row md:flex-wrap md:w-full z-10">
           {SERVICE_DATA.map((item) => (
-            <div key={item.title} className="flex flex-col px-7 py-10 rounded-[10px] bg-white shadow-[0px_2px_18px_0px_rgba(0,0,0,0.12)] items-center z-5 md:w-[calc(50%-10px)]">
+            <div key={item.title} className="flex flex-col text-center px-7 py-10 rounded-[10px] bg-white shadow-[0px_2px_18px_0px_rgba(0,0,0,0.12)] items-center z-5 md:w-[calc(50%-10px)]">
               <img src={item.image} alt={item.title} className="h-[100px] w-[133px] mb-3" />
               <h3 className="text-[18px] text-deep-brown font-medium tracking-[0.72px] mb-[9px]">{item.title}</h3>
               <p className="text-deep-brown text-sm font-normal tracking-[0.56px]">{item.description}</p>
             </div>
           ))}
+          <img src="/images/logistics/box-1.png" alt="box-1" className="absolute w-[140px] h-[140px] md:w-[200px] md:h-[200px] -left-[50px] -bottom-[140px] md:-left-[40px] md:-bottom-[133px] xl:-left-[60px] xl:-bottom-[156px]" />
+          <img src="/images/logistics/box-2.png" alt="box-1" className="absolute w-[180px] h-[180px] md:w-[250px] md:h-[250px] -right-[91px] -bottom-[111px] md:-right-[40px] md:-bottom-[128px] lg:-right-[60px] lg:-bottom-[117px]  xl:-bottom-[156px]" />
         </div>
       </AnimateDiv>
     </section>

@@ -1,18 +1,15 @@
 import { PRODUCTS } from "@/lib/products";
 import { useRouter } from "next/navigation";
 import AnimateDiv from "@/features/shared/AnimateDiv";
+import Breadcrumb from "../Breadcrumb";
 
 const Products = () => {
   const router = useRouter()
   return (
     <>
       <section className="relative">
-        <div className="flex gap-2 px-5 py-4 text-sm tracking-[0.84px] font-normal text-[#30241E] md:px-10 lg:px-15 max-w-[1080px] mx-auto xl:px-0">
-          <span>首頁</span>
-          <span>{">"}</span>
-          <span>產品系列</span>
-          <span>{">"}</span>
-          <span className="font-bold">所有產品</span>
+        <div className="px-5 py-4 md:px-10 lg:px-15 max-w-[1080px] mx-auto xl:px-0">
+          <Breadcrumb>所有產品</Breadcrumb>
         </div>
         <AnimateDiv className="px-5 pt-15 pb-20 text-center md:px-10 lg:px-15 lg:pt-20 lg:pb-30 xl:pt-25 max-w-[1080px] mx-auto xl:px-0">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-15 md:gap-9 md:gap-y-10 lg:gap-y-15">
