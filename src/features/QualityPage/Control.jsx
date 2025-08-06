@@ -27,7 +27,7 @@ const Control = () => {
     <>
       <Navbar white />
       <Hero />
-      <section className="relative">
+      <section className="relative overflow-hidden">
         <AnimateDiv className="flex gap-2 px-5 py-4 text-sm tracking-[0.84px] font-normal text-[#30241E] md:px-10 lg:px-15 max-w-[1080px] mx-auto xl:px-0">
           <span>首頁</span>
           <span>{">"}</span>
@@ -49,7 +49,7 @@ const Control = () => {
               我們深知食品安全無法妥協，因此從原料進廠、製程管理到最終產品出貨，每一個環節都由專業團隊嚴格控管，確保產品符合最高品質與安全標準。
             </p>
           </div>
-          <div className="flex flex-col gap-5 md:flex-row items-center justify-center">
+          <div className="relative flex flex-col gap-5 md:flex-row items-center justify-center">
             <div className="w-full max-w-[500px] rounded-[6px] overflow-hidden xl:max-w-none">
               <img
                 src="/images/quality/lab-1.jpg"
@@ -64,6 +64,16 @@ const Control = () => {
                 className="w-full hover:scale-102 transition-all duration-500"
               />
             </div>
+            <img
+              src="/images/quality/micro.png"
+              alt="micro"
+              className="hidden md:block absolute -left-[80px] -top-[59px] w-[160px] -z-10 lg:-left-[94px] lg:-top-[85px] lg:w-[200px] xl:-left-[100px] xl:-top-[63px]"
+            />
+            <img
+              src="/images/quality/cup.png"
+              alt="cup"
+              className="hidden md:block absolute -right-[90px] -bottom-[80px] w-[160px] -z-10 lg:-right-[111px] lg:-bottom-[110px] lg:w-[200px] xl:-right-[100px] xl:-bottom-[96px]"
+            />
           </div>
         </AnimateDiv>
         <AnimateDiv className="px-5 py-15 text-center md:px-10 lg:px-15 lg:py-20 max-w-[1080px] mx-auto xl:px-0">
@@ -84,7 +94,7 @@ const Control = () => {
                   alt={item.title}
                   className="w-[100px] mx-auto"
                 />
-                <h3 className="text-deep-brown text-base font-medium tracking-[0.64px]">
+                <h3 className="text-deep-brown text-base font-medium tracking-[0.64px] lg:text-[18px] lg:tracking-[0.72px]">
                   {item.title}
                 </h3>
                 <p className="text-deep-brown/[0.82] text-sm tracking-[0.56px]">
@@ -94,16 +104,6 @@ const Control = () => {
             ))}
           </div>
         </AnimateDiv>
-        <img
-          src="/images/quality/micro.png"
-          alt="micro"
-          className="hidden md:block absolute left-0 top-[219px] w-[160px] -z-10 lg:top-[248px] lg:w-[200px]"
-        />
-        <img
-          src="/images/quality/cup.png"
-          alt="cup"
-          className="hidden md:block absolute right-0 top-[484px] w-[153px] -z-10 lg:top-[531px] lg:w-[200px] xl:top-[582px]"
-        />
       </section>
       <section className="px-5 py-15 bg-[#F7F3F2] text-center">
         <AnimateDiv>

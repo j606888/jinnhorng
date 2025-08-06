@@ -29,7 +29,7 @@ const Contact = () => {
         <span>{">"}</span>
         <span className="font-bold">聯絡我們</span>
       </AnimateDiv>
-      <AnimateDiv className="flex flex-col px-5 pt-[28px] text-center md:px-10 lg:px-15 lg:py-20 lg:pb-15 max-w-[1080px] mx-auto">
+      <AnimateDiv className="flex flex-col px-5 pt-[28px] text-center md:px-10 lg:px-15 lg:pt-[48px] max-w-[1080px] mx-auto">
         <h2 className="mb-[6px] text-[24px] text-deep-brown font-bold tracking-[1.44px]">
           晉弘實業股份有限公司
         </h2>
@@ -51,14 +51,14 @@ const Contact = () => {
             <h3 className="text-base text-deep-brown/[0.82] font-medium tracking-[0.64px] mb-2">
               {item.title}
             </h3>
-            <p className="text-deep-brown/[0.58] text-sm font-normal tracking-[0.56px]">
+            <p className="text-deep-brown/[0.58] text-base md:text-sm font-normal tracking-[0.56px]">
               {item.description}
             </p>
           </div>
         ))}
       </AnimateDiv>
       <AnimateDiv>
-        <ul className="flex flex-col gap-3 px-5 text-sm text-deep-brown tracking-[0.56px] list-none mb-[37px] md:text-base md:px-10 lg:px-15 max-w-[1080px] mx-auto">
+        <ul className="flex flex-col gap-3 px-5 text-base text-deep-brown tracking-[0.56px] list-none mb-[37px] md:px-10 lg:px-15 max-w-[1080px] mx-auto">
           <li className={CUSTOM_LI_STYLE}>產業類別：食品製造業/糖類製造業</li>
           <li className={CUSTOM_LI_STYLE}>代表人姓名：李正峰</li>
           <li className={CUSTOM_LI_STYLE}>設立日期：1977/10/12</li>
