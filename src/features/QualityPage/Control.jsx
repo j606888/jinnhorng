@@ -67,12 +67,12 @@ const Control = () => {
             <img
               src="/images/quality/micro.png"
               alt="micro"
-              className="hidden md:block absolute -left-[80px] -top-[59px] w-[160px] -z-10 lg:-left-[94px] lg:-top-[85px] lg:w-[200px] xl:-left-[100px] xl:-top-[63px]"
+              className="hidden md:block absolute -left-[80px] -top-[59px] w-[160px] -z-10 lg:-left-[94px] lg:-top-[85px] lg:w-[200px] xl:-left-[100px] xl:-top-[63px] 2xl:-left-[160px] 2xl:-top-[100px] 2xl:w-[280px]"
             />
             <img
               src="/images/quality/cup.png"
               alt="cup"
-              className="hidden md:block absolute -right-[90px] -bottom-[80px] w-[160px] -z-10 lg:-right-[111px] lg:-bottom-[110px] lg:w-[200px] xl:-right-[100px] xl:-bottom-[96px]"
+              className="hidden md:block absolute -right-[90px] -bottom-[80px] w-[160px] -z-10 lg:-right-[111px] lg:-bottom-[110px] lg:w-[200px] xl:-right-[100px] xl:-bottom-[96px] 2xl:w-[250px] 2xl:-right-[180px] 2xl:-bottom-[113px]"
             />
           </div>
         </AnimateDiv>

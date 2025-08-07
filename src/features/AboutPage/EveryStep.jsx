@@ -28,6 +28,11 @@ const EveryStep = () => {
                 alt="about_us_circle"
                 className="absolute -bottom-[40px] right-[20px] w-[78px] -z-10  md:w-[95px] md:-bottom-[48px] md:-right-[48px] lg:w-[75px] lg:-bottom-[37px] lg:-right-[37px] xl:w-[95px] xl:-bottom-[43px] xl:-right-[47px]"
               />
+                <img
+                  src="/images/about/graphic1.png"
+                  alt="graphic1"
+                  className="hidden lg:block absolute -top-[90px] -left-[80px] w-[180px] -z-10 xl:w-[240px] xl:-left-[120px] xl:-top-[108px] 2xl:-left-[180px] 2xl:-top-[75px]"
+                />
             </div>
           </AnimateDiv>
           <AnimateDiv className="flex flex-col gap-10 lg:items-center lg:flex-row lg:gap-15">
@@ -45,11 +50,18 @@ const EveryStep = () => {
                 猶太潔食認證。這些來自國際的肯定，不僅展現我們對品質的堅持，也象徵著我們對不同飲食文化的尊重與重視，讓每一位顧客都能感受到我們的用心與責任。
               </p>
             </div>
-            <div className="h-[250px] w-full max-w-[432px] rounded-[10px] overflow-hidden md:h-[318px] md:w-[432px] mx-auto lg:w-full  xl:w-[500px] xl:h-[368px] xl:flex-shrink-0 xl:max-w-none">
+            <div className="h-[250px] w-full max-w-[432px] rounded-[10px] md:h-[318px] md:w-[432px] mx-auto lg:w-full  xl:w-[500px] xl:h-[368px] xl:flex-shrink-0 xl:max-w-none relative">
+              <div className="overflow-hidden rounded-[10px]">
+                <img
+                  src="/images/about/certificate.jpg"
+                  alt="certificate"
+                  className="w-full h-full object-cover hover:scale-102 transition-all duration-300"
+                />
+              </div>
               <img
-                src="/images/about/certificate.jpg"
-                alt="certificate"
-                className="w-full h-full object-cover hover:scale-102 transition-all duration-300"
+                src="/images/about/graphic2.png"
+                alt="graphic2"
+                className="hidden lg:block absolute w-[180px] -z-10 -right-[80px] -bottom-[90px] xl:w-[240px] xl:-right-[100px] xl:-bottom-[120px] 2xl:-right-[181px] 2xl:-bottom-[150px]"
               />
             </div>
           </AnimateDiv>
@@ -58,12 +70,12 @@ const EveryStep = () => {
       <img
         src="/images/about/graphic1.png"
         alt="graphic1"
-        className="hidden md:block absolute top-[11px] -left-[69px] w-[180px] -z-10 lg:top-[0px] lg:left-[0px] xl:w-[240px] xl:top-[0px] xl:left-[0px]"
+        className="hidden md:block absolute top-[11px] -left-[69px] w-[180px] -z-10 lg:hidden lg:top-[0px] lg:left-[0px] xl:w-[240px] xl:top-[0px] xl:left-[0px]"
       />
       <img
         src="/images/about/graphic2.png"
         alt="graphic2"
-        className="hidden md:block absolute bottom-[0px] -right-[22px] w-[180px] -z-10 lg:-right-[45px] lg:-bottom-[23px] xl:-bottom-[62px] xl:right-[0px] xl:w-[240px]"
+        className="hidden md:block absolute bottom-[0px] -right-[22px] w-[180px] -z-10 lg:hidden lg:-right-[45px] lg:-bottom-[23px] xl:-bottom-[62px] xl:right-[0px] xl:w-[240px]"
       />
     </section>
   );

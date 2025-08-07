@@ -19,7 +19,7 @@ const QUALITIES = [
 ];
 const Quality = () => {
   return (
-    <section className="bg-[#2F2B26] bg-[url('/images/homepage/spoon_bg_mobile.jpg')] bg-contain bg-no-repeat md:bg-[url('/images/homepage/spoon_bg_desktop.png')] md:bg-center md:bg-cover xl:bg-contain">
+    <section className="bg-[#2F2B26] bg-[url('/images/homepage/spoon_bg_mobile.jpg')] bg-contain bg-no-repeat md:bg-[url('/images/homepage/spoon_bg_desktop.png')] md:bg-top md:bg-cover xl:bg-contain">
       <div className="px-5 md:px-10 lg:px-15 py-15 md:py-24">
         <AnimateDiv className="mb-14 flex flex-col items-center text-center md:px-[34px] md:mb-20">
           <Subtitle enTitle="QUALITY COMMITMENT" cnTitle="品質守護" white />
