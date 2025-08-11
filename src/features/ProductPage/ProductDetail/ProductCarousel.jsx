@@ -1,5 +1,5 @@
 import ProductCard from "./ProductCard";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import ArrowLarge from "@/components/icons/ArrowLarge";
 import { clsx } from "clsx";
 
@@ -15,6 +15,10 @@ const RIGHT_DISABLED_INDEX = {
 }
 const ProductCarousel = ({ products }) => {
   const [index, setIndex] = useState(0);
+  const indexRef = useRef(index);
+  useEffect(() => {
+    indexRef.current = index;
+  }, [index]);
 
   const next = () => {
     setIndex((prev) => prev + 1);
@@ -31,6 +35,9 @@ const ProductCarousel = ({ products }) => {
       const width = window.innerWidth;
       if (width >= 1280) {
         setScreenSize("xl");
+        if (indexRef.current > 1) {
+          setIndex(1);
+        }
       } else if (width >= 1024) {
         setScreenSize("lg");
       } else {
