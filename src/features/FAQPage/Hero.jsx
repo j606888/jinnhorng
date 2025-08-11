@@ -1,7 +1,7 @@
 import AnimateDiv from "@/features/shared/AnimateDiv";
 
 const Hero = () => {
-  return <section className="relative w-full h-[360px] bg-[url('/images/faq/hero.jpg')] bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center z-1 overflow-hidden lg:h-[458px]">
+  return <section className="relative w-full h-[360px] bg-[url('/images/faq/hero.jpg')] bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center z-1 overflow-hidden lg:h-[360px] xl:h-[458px]">
     <AnimateDiv className='mt-[60px] text-center z-2'>
       <h2 className='text-white font-ar text-xl font-semibold tracking-[1.2px] mb-[2px] uppercase [text-shadow:0_0_8.1px_rgba(0,0,0,0.25)]'>FAQS</h2>
       <h1 className='text-white text-[36px] font-bold tracking-[2.88px]'>常見問題</h1>

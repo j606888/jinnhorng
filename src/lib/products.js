@@ -139,6 +139,10 @@ export const PRODUCTS = [
         name: "保存方式",
         value: "避免高溫與陽光直射，建議儲存於陰涼乾燥處，遠離強烈氣味物品"
       },
+      {
+        name: "保存期限",
+        value: "未開封常溫保存可達 12 個月（依包裝與濃度而異）"
+      }
     ],
     delivery: [
       {
@@ -189,7 +193,7 @@ export const PRODUCTS = [
         image: "/images/products/maltose_syrup.jpg",
       },
       {
-        name: '75% 麥芽糖漿 / 35kg 食品級塑膠桶',
+        name: '75% 麥芽糖漿 / 25kg 食品級塑膠桶',
         image: "/images/products/maltose_syrup_75_35kg.jpg",
       },
       {
@@ -354,7 +358,7 @@ export const PRODUCTS = [
       },
       {
         name: "保存期限",
-        value: "20kg 包裝：常溫未開封保存 12 個月\n25kg 包裝：常溫未開封保存 24 個月"
+        value: "20kg 包裝：常溫未開封保存 12 個月<br />25kg 包裝：常溫未開封保存 24 個月"
       }
     ],
     delivery: [

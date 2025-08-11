@@ -28,12 +28,12 @@ const Contact = () => {
 
   return (
     <section>
-      <AnimateDiv className="flex gap-2 px-5 py-4 text-sm tracking-[0.84px] font-normal text-[#30241E] md:px-10 lg:px-15 max-w-[1080px] mx-auto xl:px-15">
+      <AnimateDiv className="flex gap-2 px-5 py-4 text-sm tracking-[0.84px] font-normal text-[#30241E] md:px-10 lg:px-15 max-w-[1080px] mx-auto xl:px-0">
         <span>首頁</span>
         <span>{">"}</span>
         <span className="font-bold">常見問題</span>
       </AnimateDiv>
-      <AnimateDiv className="flex flex-col px-5 pt-8 pb-10 gap-3 relative  mb-7 md:px-10 lg:px-15 max-w-[1080px] mx-auto">
+      <AnimateDiv className="flex flex-col px-5 pt-8 pb-10 gap-3 relative  mb-7 md:px-10 lg:px-15 max-w-[1080px] mx-auto xl:px-0">
         {QUESTIONS_DATA.map((item) => (
           <Question key={item.id} {...item} isOpen={openQuestionId === item.id} onClick={() => setOpenQuestionId(openQuestionId === item.id ? null : item.id)} />
         ))}

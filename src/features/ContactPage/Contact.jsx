@@ -24,12 +24,12 @@ const CUSTOM_LI_STYLE =
 const Contact = () => {
   return (
     <section>
-      <AnimateDiv className="flex gap-2 px-5 py-4 text-sm tracking-[0.84px] font-normal text-[#30241E] md:px-10 lg:px-15 max-w-[1080px] mx-auto xl:px-15">
+      <AnimateDiv className="flex gap-2 px-5 py-4 text-sm tracking-[0.84px] font-normal text-[#30241E] md:px-10 lg:px-15 max-w-[1080px] mx-auto xl:px-0">
         <span>首頁</span>
         <span>{">"}</span>
         <span className="font-bold">聯絡我們</span>
       </AnimateDiv>
-      <AnimateDiv className="flex flex-col px-5 pt-[28px] text-center md:px-10 lg:px-15 lg:pt-[48px] max-w-[1080px] mx-auto">
+      <AnimateDiv className="flex flex-col px-5 pt-[28px] text-center md:px-10 lg:px-15 lg:pt-[48px] max-w-[1080px] mx-auto xl:px-0">
         <h2 className="mb-[6px] text-[24px] text-deep-brown font-bold tracking-[1.44px]">
           晉弘實業股份有限公司
         </h2>
@@ -37,7 +37,7 @@ const Contact = () => {
           JINN HORNG CHEMICAL INDUSTRIAL CO., LTD.
         </p>
       </AnimateDiv>
-      <AnimateDiv className="flex flex-col px-5 gap-4 relative md:flex-row md:w-full mb-7 md:px-10 lg:px-15 max-w-[1080px] mx-auto">
+      <AnimateDiv className="flex flex-col px-5 gap-4 relative md:flex-row md:w-full mb-7 md:px-10 lg:px-15 max-w-[1080px] mx-auto xl:px-0">
         {CONTACT_DATA.map((item) => (
           <div
             key={item.title}
@@ -58,7 +58,7 @@ const Contact = () => {
         ))}
       </AnimateDiv>
       <AnimateDiv>
-        <ul className="flex flex-col gap-3 px-5 text-base text-deep-brown tracking-[0.56px] list-none mb-[37px] md:px-10 lg:px-15 max-w-[1080px] mx-auto">
+        <ul className="flex flex-col gap-3 px-5 text-base text-deep-brown tracking-[0.56px] list-none mb-[37px] md:px-10 lg:px-15 max-w-[1080px] mx-auto xl:px-0">
           <li className={CUSTOM_LI_STYLE}>產業類別：食品製造業/糖類製造業</li>
           <li className={CUSTOM_LI_STYLE}>代表人姓名：李正峰</li>
           <li className={CUSTOM_LI_STYLE}>設立日期：1977/10/12</li>
@@ -67,11 +67,11 @@ const Contact = () => {
           </li>
         </ul>
       </AnimateDiv>
-      <AnimateDiv className="px-5 pb-[28px] md:px-10 lg:px-15 max-w-[1080px] mx-auto">
+      <AnimateDiv className="px-5 pb-[28px] md:px-10 lg:px-15 max-w-[1080px] mx-auto xl:px-0">
         <img
           src="/images/contact/car.jpg"
           alt="car"
-          className="w-full h-[224px] rounded-[10px] md:h-[458px] lg:h-[602px] xl:h-[719px]"
+          className="w-full rounded-[10px]"
         />
       </AnimateDiv>
     </section>

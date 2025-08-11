@@ -3,7 +3,7 @@ import AnimateDiv from "@/features/shared/AnimateDiv";
 
 const ContactUs = () => {
   return (
-    <section className="px-5 py-15 h-[882px] md:py-[203px] bg-cover bg-center bg-no-repeat md:bg-[url('/images/contact_us_tablet.jpg')] md:px-10 md:h-[665px] lg:h-[667px] lg:px-15 lg:py-[180px] lg:bg-[url('/images/contact_us_desktop.jpg')] relative overflow-hidden">
+    <section className="px-5 py-15 h-[882px] md:py-[203px] bg-cover bg-center bg-no-repeat bg-[url('/images/contact_us_mobile.jpg')] md:bg-[url('/images/contact_us_tablet.jpg')] md:px-10 md:h-[665px] lg:h-[667px] lg:px-15 lg:py-[180px] lg:bg-[url('/images/contact_us_desktop.jpg')] relative overflow-hidden">
       <AnimateDiv className="relative flex flex-col items-center text-center md:items-start max-w-[1080px] mx-auto z-1">
         <h3 className="text-deep-brown text-[28px] font-bold mb-3 tracking-[2.24px] md:text-[36px] md:text-start md:mb-5 xl:text-[40px] xl:tracking-[3.2px]">
           {" "}

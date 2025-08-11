@@ -18,7 +18,9 @@ const Overview = ({ product }) => {
       >
         <Breadcrumb>{product.name}</Breadcrumb>
       </AnimateDiv>
-      <AnimateDiv className={`flex flex-col gap-10 py-9 ${ContainerClass} md:flex-row xl:gap-15`}>
+      <AnimateDiv
+        className={`flex flex-col gap-10 py-9 ${ContainerClass} md:flex-row xl:gap-15`}
+      >
         <div className="md:w-1/2 xl:flex-shrink-0 xl:w-auto">
           <div className="border-1 border-[#E0E0E0] rounded-[8px] overflow-hidden max-w-[366px] mb-4 relative mx-auto md:mx-0 lg:max-w-[432px] xl:max-w-[500px]">
             <img src={selectedPreview.image} alt={selectedPreview.name} />
@@ -35,20 +37,22 @@ const Overview = ({ product }) => {
               />
             )}
           </div>
-          <div className="flex gap-4 items-center justify-center md:justify-start">
-            {product.previews.map((preview, index) => (
-              <div
-                key={index}
-                className={`w-[64px] h-[64px] rounded-[8px] overflow-hidden cursor-pointer border-2 ${
-                  selectedPreview.name === preview.name
-                    ? " border-[#D5B09F]"
-                    : "border-transparent"
-                }`}
-                onClick={() => setPreviewIndex(index)}
-              >
-                <img src={preview.image} alt={preview.name} />
-              </div>
-            ))}
+          <div className="text-center overflow-x-auto md:text-start">
+            <div className="inline-flex gap-4 md:items-center md:justify-start ">
+              {product.previews.map((preview, index) => (
+                <div
+                  key={index}
+                  className={`w-[64px] h-[64px] rounded-[8px] overflow-hidden cursor-pointer border-2 flex-shrink-0 ${
+                    selectedPreview.name === preview.name
+                      ? " border-[#D5B09F]"
+                      : "border-transparent"
+                  }`}
+                  onClick={() => setPreviewIndex(index)}
+                >
+                  <img src={preview.image} alt={preview.name} />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
         <div className="md:w-1/2 xl:w-auto">
