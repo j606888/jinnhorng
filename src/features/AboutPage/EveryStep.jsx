@@ -1,8 +1,19 @@
 import AnimateDiv from "../shared/AnimateDiv";
+import Link from "next/link";
 
 const EveryStep = () => {
   return (
     <section className="relative overflow-hidden">
+      <AnimateDiv className="flex gap-2 px-5 py-4 text-sm tracking-[0.84px] font-normal text-[#30241E] md:px-10 lg:px-15 max-w-[1080px] mx-auto xl:px-0">
+        <Link
+          href="/"
+          className="hover:underline hover:text-deep-brown/82 active:font-bold"
+        >
+          <span>首頁</span>
+        </Link>
+        <span>{">"}</span>
+        <span className="font-bold">關於我們</span>
+      </AnimateDiv>
       <div className="px-5 py-20 relative md:px-10 md:pt-15 md:pb-25 lg:px-15 lg:py-20 max-w-[1080px] mx-auto xl:px-0 xl:pt-25 xl:pb-30">
         <div className="flex flex-col gap-20 z-2 lg:gap-15">
           <AnimateDiv className="flex flex-col gap-10 lg:items-center lg:flex-row-reverse lg:gap-15">
@@ -28,11 +39,11 @@ const EveryStep = () => {
                 alt="about_us_circle"
                 className="absolute -bottom-[40px] right-[20px] w-[78px] -z-10  md:w-[95px] md:-bottom-[48px] md:-right-[48px] lg:w-[75px] lg:-bottom-[37px] lg:-right-[37px] xl:w-[95px] xl:-bottom-[43px] xl:-right-[47px]"
               />
-                <img
-                  src="/images/about/graphic1.png"
-                  alt="graphic1"
-                  className="hidden lg:block absolute -top-[90px] -left-[80px] w-[180px] -z-10 xl:w-[240px] xl:-left-[120px] xl:-top-[108px] 2xl:-left-[180px] 2xl:-top-[75px]"
-                />
+              <img
+                src="/images/about/graphic1.png"
+                alt="graphic1"
+                className="hidden lg:block absolute -top-[90px] -left-[80px] w-[180px] -z-10 xl:w-[240px] xl:-left-[120px] xl:-top-[108px] 2xl:-left-[180px] 2xl:-top-[75px]"
+              />
             </div>
           </AnimateDiv>
           <AnimateDiv className="flex flex-col gap-10 lg:items-center lg:flex-row lg:gap-15">

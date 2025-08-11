@@ -3,6 +3,7 @@ import ContactUs from "../shared/ContactUs";
 import Footer from "../shared/Footer";
 import Hero from "./Hero";
 import AnimateDiv from "@/features/shared/AnimateDiv";
+import Link from "next/link";
 
 const CONTROL_DATA = [
   {
@@ -34,9 +35,14 @@ const Control = () => {
       <Hero />
       <section className="relative">
         <AnimateDiv className="flex gap-2 px-5 py-4 text-sm tracking-[0.84px] font-normal text-[#30241E] md:px-10 lg:px-15 max-w-[1080px] mx-auto xl:px-0">
-          <span>首頁</span>
+          <Link
+            href="/"
+            className="hover:underline hover:text-deep-brown/82 active:font-bold"
+          >
+            <span>首頁</span>
+          </Link>
           <span>{">"}</span>
-          <span>品質守護</span>
+          <span className="text-deep-brown/60">品質守護</span>
           <span>{">"}</span>
           <span className="font-bold">檢測報告</span>
         </AnimateDiv>
