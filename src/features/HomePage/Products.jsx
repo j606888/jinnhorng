@@ -1,6 +1,6 @@
 import ProductCard from "./ProductCard";
 import CtaButton from "@/components/CtaButton";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import ArrowLarge from "@/components/icons/ArrowLarge";
 import { clsx } from "clsx";
 import AnimateDiv from "@/features/shared/AnimateDiv";
@@ -14,6 +14,8 @@ const RIGHT_DISABLED_INDEX = {
 };
 const Products = () => {
   const [index, setIndex] = useState(0);
+  const indexRef = useRef(index);
+
   const [isHovered, setIsHovered] = useState(false);
   const [screenSize, setScreenSize] = useState("md");
 
@@ -26,10 +28,17 @@ const Products = () => {
   };
 
   useEffect(() => {
+    indexRef.current = index;
+  }, [index]);
+
+  useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
       if (width >= 1280) {
         setScreenSize("xl");
+        if (indexRef.current > 2) {
+          setIndex(2);
+        }
       } else if (width >= 1024) {
         setScreenSize("lg");
       } else {

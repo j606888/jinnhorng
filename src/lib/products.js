@@ -364,7 +364,7 @@ export const PRODUCTS = [
     delivery: [
       {
         name: "大宗粉體包裝",
-        value: "20kg／紙箱<br />25kg／紙箱"
+        value: "20kg／PE 內袋 + 紙袋外包<br />25kg／PE 內袋 + 紙袋外包"
       },
     ],
     industries: [
