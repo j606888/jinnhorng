@@ -30,7 +30,7 @@ const OtherProducts = ({ product }) => {
         <div ref={scrollRef} onScroll={handleScroll} className="flex gap-9 overflow-x-auto snap-x px-5 pb-8 scroll-smooth" style={{ scrollbarWidth: 'none' }}>
           {otherProducts.map((product) => (
             <div key={product.slug} className="flex-shrink-0 w-[277px] snap-center text-center cursor-pointer" onClick={() => router.push(`/products/${product.slug}`)}>
-              <img src={product.image} alt={product.name} className="w-full object-cover border-1 border-[#E0E0E0] rounded-[10px] mb-5" />
+              <img src={product.image} alt={product.name} className="w-full object-cover border-1 border-[#E0E0E0] rounded-[10px] mb-5" onContextMenu={(e) => e.preventDefault()} />
               <h4 className="text-deep-brown text-[15px] font-medium tracking-[0.6px] mb-1">{product.name}</h4>
               <p className="text-deep-brown/[0.82] text-xs font-medium tracking-[0.48px]">{product.enName}</p>
             </div>

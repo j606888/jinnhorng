@@ -8,7 +8,7 @@ import Breadcrumb from "../Breadcrumb";
 const ContainerClass = "px-5 md:px-10 lg:px-15 max-w-[1080px] mx-auto xl:px-0";
 
 const Overview = ({ product }) => {
-  const [previewIndex, setPreviewIndex] = useState(0);
+  const [previewIndex, setPreviewIndex] = useState(product.previews.findIndex(preview => preview.default) || 0);
   const selectedPreview = product.previews[previewIndex];
 
   return (
@@ -23,7 +23,7 @@ const Overview = ({ product }) => {
       >
         <div className="md:w-1/2 xl:flex-shrink-0 xl:w-auto">
           <div className="border-1 border-[#E0E0E0] rounded-[8px] overflow-hidden max-w-[366px] mb-4 relative mx-auto md:mx-0 lg:max-w-[432px] xl:max-w-[500px]">
-            <img src={selectedPreview.image} alt={selectedPreview.name} />
+            <img src={selectedPreview.image} alt={selectedPreview.name} onContextMenu={(e) => e.preventDefault()} />
             {previewIndex > 0 && (
               <ButtonPrevious
                 onClick={() => setPreviewIndex(previewIndex - 1)}
@@ -49,7 +49,7 @@ const Overview = ({ product }) => {
                   }`}
                   onClick={() => setPreviewIndex(index)}
                 >
-                  <img src={preview.image} alt={preview.name} />
+                  <img src={preview.image} alt={preview.name} onContextMenu={(e) => e.preventDefault()} />
                 </div>
               ))}
             </div>

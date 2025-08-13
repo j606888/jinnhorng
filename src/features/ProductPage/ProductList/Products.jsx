@@ -24,6 +24,7 @@ const Products = () => {
                     src={item.image}
                     alt={item.enName}
                     className="w-full group-hover:scale-102 transition-all duration-500"
+                    onContextMenu={(e) => e.preventDefault()}
                   />
                 </div>
                 <div>

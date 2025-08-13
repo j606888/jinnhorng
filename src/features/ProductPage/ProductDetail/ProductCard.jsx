@@ -8,7 +8,7 @@ const ProductCard = ({ product, onMouseEnter, onMouseLeave }) => {
   return (
     <div className="flex flex-col items-center min-w-[244px] lg:min-w-[337px] xl:min-w-[273px] group cursor-pointer " onClick={handleClick} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
       <div className="h-[244px] w-[244px] overflow-hidden rounded-[10px] border-1 border-[#E0E0E0] lg:h-[337px] lg:w-[337px] xl:h-[273px] xl:w-[273px]">
-        <img src={product.image} alt={product.name} className="h-full w-full object-cover group-hover:scale-102 transition-transform duration-1000" />
+        <img src={product.image} alt={product.name} className="h-full w-full object-cover group-hover:scale-102 transition-transform duration-1000" onContextMenu={(e) => e.preventDefault()} />
       </div>
       <div className="bg-white pt-5 px-4 w-full flex flex-col items-center">
         <h3 className="text-[#30241E] text-[15px] font-medium tracking-[0.6x] mb-1">{product.name}</h3>

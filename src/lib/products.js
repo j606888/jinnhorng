@@ -7,16 +7,17 @@ export const PRODUCTS = [
     description: "果糖(高果糖糖漿)，以澱粉為原料，經過酵素水解及轉化後，以果糖及葡萄糖等單醣為主要成份形成之液態糖漿產品。<br /> HFS 55 為市面上最常見之成分，甜度高於一般蔗糖1.2~1.8倍，能以較少用量達到理想甜味，提升配方效益又有良好溶解性與穩定性，因此廣泛應用於食品與飲料產業。",
     previews: [
       {
-        name: '25kg 食品級塑膠桶',
-        image: '/images/products/fructose.jpg',
-      },
-      {
         name: '3kg 食品級塑膠袋',
         image: '/images/products/fructose_3kg.jpg',
       },
       {
         name: '5kg 食品級塑膠桶',
         image: '/images/products/fructose_5kg.jpg',
+      },
+      {
+        name: '25kg 食品級塑膠桶',
+        image: '/images/products/fructose.jpg',
+        default: true
       },
       {
         name: '30kg 食品級塑膠桶',
@@ -37,12 +38,24 @@ export const PRODUCTS = [
         value: "75 ± 1°（可客製調整）"
       },
       {
-        name: "果糖含量等級",
-        value: "42% / 55% / 90%（可依需求提供）"
+        name: "酸鹼值 pH",
+        value: ">3.5"
+      },
+      {
+        name: "果糖",
+        value: "55%±2 (可依需求供應不同含量)"
+      },
+      {
+        name: "葡萄糖",
+        value: "39%±1"
+      },
+      {
+        name: "著色度",
+        value: "＜0.12 RBU"
       },
       {
         name: "製造地",
-        value: "台灣食品工廠製造"
+        value: "台灣"
       },
       {
         name: "保存方式",
@@ -98,16 +111,17 @@ export const PRODUCTS = [
     description: "轉化液糖是以蔗糖(砂糖)為原料所製成的液態糖漿，也可稱為甘蔗液糖。<br />主要是將蔗糖溶解後，經水解反應使蔗糖(砂糖)分解成含有葡萄糖、果糖及蔗糖的液態糖漿。<br />轉化液糖的甜度較高，且可保持較少水分不易結晶，因而廣泛應用於食品加工、飲料製造及烘焙等領域。",
     previews: [
       {
-        name: '25kg 食品級塑膠桶',
-        image: '/images/products/sugar_syrup.jpg',
-      },
-      {
         name: '3kg 食品級塑膠袋',
         image: '/images/products/sugar_syrup_3kg.jpg',
       },
       {
         name: '5kg 食品級塑膠桶',
         image: '/images/products/sugar_syrup_5kg.jpg',
+      },
+      {
+        name: '25kg 食品級塑膠桶',
+        image: '/images/products/sugar_syrup.jpg',
+        default: true
       },
       {
         name: '30kg 食品級塑膠桶',
@@ -128,12 +142,28 @@ export const PRODUCTS = [
         value: "75 ± 1°（可客製調整）"
       },
       {
-        name: "轉化糖含量",
-        value: "30~50%（可依需求提供）"
+        name: "蔗糖含量",
+        value: "30~50% (可依需求供應不同含量)"
+      },
+      {
+        name: "酸鹼值 pH",
+        value: ">3.5"
+      },
+      {
+        name: "果糖",
+        value: "25~35%"
+      },
+      {
+        name: "葡萄糖",
+        value: "25~35%"
+      },
+      {
+        name: "著色度",
+        value: "＜0.12 RBU"
       },
       {
         name: "製造地",
-        value: "台灣食品工廠製造"
+        value: "台灣"
       },
       {
         name: "保存方式",
@@ -183,22 +213,100 @@ export const PRODUCTS = [
   },
   {
     slug: "maltose-syrup",
-    name: "麥芽糖漿",
-    enName: "Maltose Syrup",
-    image: "/images/products/maltose_syrup.jpg",
+    name: "75% 麥芽糖漿",
+    enName: "75% Maltose Syrup",
+    image: "/images/products/maltose_syrup_75_25kg.jpg",
     description: "麥芽糖漿以澱粉為原料，經酵素水解後製成的高黏度糖漿。<br />麥芽糖甜度約為蔗糖的 30%～50%，甜度適中又不搶味，能有效提升產品整體風味協調，並具有良好的保濕性與抗結晶性。<br />因此廣泛應用於烘焙、糖果、飲料與醬料加工等各大食品產業中。",
     previews: [
       {
-        name: '75% 麥芽糖漿 / 30kg 食品級塑膠桶',
-        image: "/images/products/maltose_syrup.jpg",
+        name: '75% 麥芽糖漿 / 25kg 食品級塑膠桶',
+        image: "/images/products/maltose_syrup_75_25kg.jpg",
+        default: true
       },
       {
-        name: '75% 麥芽糖漿 / 25kg 食品級塑膠桶',
-        image: "/images/products/maltose_syrup_75_35kg.jpg",
+        name: '75% 麥芽糖漿 / 30kg 食品級塑膠桶',
+        image: "/images/products/maltose_syrup_75_30kg.jpg",
       },
+    
+    ],
+    specifications: [
+      {
+        name: "外觀",
+        value: "淡黃色或透明黏稠液體"
+      },
+      {
+        name: "糖度（Brix）",
+        value: "75 ± 2°(可客製調整）"
+      },
+      {
+        name: "酸鹼值 pH",
+        value: ">3.5"
+      },
+      {
+        name: "著色度",
+        value: "＜0.12 RBU"
+      },
+      {
+        name: "麥芽糖含量等級",
+        value: "≥ 40%、≥ 65% (可依需求供應不同含量)"
+      },
+      {
+        name: "製造地",
+        value: "台灣"
+      },
+      {
+        name: "保存方式",
+        value: "避免高溫與日照，建議存放於陰涼乾燥處，遠離強烈氣味物品"
+      },
+      {
+        name: "保存期限",
+        value: "未開封常溫保存可達 12 個月（依濃度與包裝而異）"
+      }
+    ],
+    delivery: [
+      {
+        name: "標準包裝",
+        value: "25kg、30kg／食品級塑膠桶"
+      },
+      {
+        name: "大宗運送規格",
+        value: "散裝槽車配送"
+      },
+    ],
+    industries: [
+      {
+        name: "烘焙業",
+        value: "麵包、糕點、餡料保濕、糖層上色"
+      },
+      {
+        name: "糖果製造",
+        value: "軟糖、硬糖、牛軋糖、麥芽糖餅"
+      },
+      {
+        name: "飲料應用",
+        value: "傳統飲品、茶飲、甜湯基底"
+      },
+      {
+        name: "調味與醬料",
+        value: "烤肉醬、味噌、糖醋醬等提香提稠用途"
+      },
+      {
+        name: "中式與傳統食品",
+        value: "芝麻糖、花生糖、年糕、糖葫蘆"
+      }
+    ]
+  },
+  {
+    slug: "maltose-syrup-85",
+    name: "85% 麥芽糖漿",
+    enName: "85% Maltose Syrup",
+    image: "/images/products/maltose_syrup_85_25kg.jpg",
+    description: "麥芽糖漿以澱粉為原料，經酵素水解後製成的高黏度糖漿。<br />麥芽糖甜度約為蔗糖的 30%～50%，甜度適中又不搶味，能有效提升產品整體風味協調，並具有良好的保濕性與抗結晶性。<br />因此廣泛應用於烘焙、糖果、飲料與醬料加工等各大食品產業中。",
+    previews: [
       {
         name: '85%麥芽糖 / 25kg 食品級餅桶',
         image: '/images/products/maltose_syrup_85_25kg.jpg',
+        default: true
       },
       {
         name: '85%麥芽糖 / 30kg 食品級塑膠桶',
@@ -212,15 +320,23 @@ export const PRODUCTS = [
       },
       {
         name: "糖度（Brix）",
-        value: "75 ± 2°（可客製）<br />85 ± 2°（可客製）"
+        value: "85 ± 2°(可客製調整）"
+      },
+      {
+        name: "酸鹼值 pH",
+        value: ">3.5"
+      },
+      {
+        name: "著色度",
+        value: "＜0.12 RBU"
       },
       {
         name: "麥芽糖含量等級",
-        value: "≥ 40%、≥ 65%（可依需求提供）"
+        value: "≥ 40%、≥ 65% (可依需求供應不同含量)"
       },
       {
         name: "製造地",
-        value: "台灣食品工廠製造"
+        value: "台灣"
       },
       {
         name: "保存方式",
@@ -274,6 +390,7 @@ export const PRODUCTS = [
       {
         name: '3kg 食品級塑膠瓶',
         image: "/images/products/flavored_syrup.jpg",
+        default: true
       },
     ],
     specifications: [
@@ -283,7 +400,7 @@ export const PRODUCTS = [
       },
       {
         name: "糖度（Brix）",
-        value: "78 ± 2°（可依需求客製）"
+        value: "78 ± 2°（可客製調整）"
       },
       {
         name: "製造地",
@@ -333,6 +450,7 @@ export const PRODUCTS = [
       {
         name: '20kg~25kg / PE 內袋 + 紙袋外包',
         image: "/images/products/dextrose_monohydrate.jpg",
+        default: true
       },
     ],
     specifications: [

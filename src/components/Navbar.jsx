@@ -28,8 +28,12 @@ export const LINKS = [
         link: "/products/sugar-syrup",
       },
       {
-        name: "麥芽糖漿",
+        name: "75%麥芽糖漿",
         link: "/products/maltose-syrup",
+      },
+      {
+        name: "85%麥芽糖漿",
+        link: "/products/maltose-syrup-85",
       },
       {
         name: "龍眼風味糖漿",
