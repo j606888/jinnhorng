@@ -17,6 +17,7 @@ const ProductCard = ({ product, onMouseEnter, onMouseLeave }) => {
         <img
           src={product.image}
           alt={product.name}
+          onContextMenu={(e) => e.preventDefault()}
           className="h-full w-full object-cover group-hover:scale-102 transition-transform duration-600"
         />
       </div>

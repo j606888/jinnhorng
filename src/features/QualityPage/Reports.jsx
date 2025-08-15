@@ -20,11 +20,11 @@ const CONTROL_DATA = [
   },
   {
     image: "/images/quality/檢測報告_麥芽糖.jpg",
-    title: "麥芽糖",
+    title: "75% 麥芽糖漿",
   },
   {
     image: "/images/quality/檢測報告_麥芽糖漿.jpg",
-    title: "麥芽糖漿",
+    title: "83-87% 麥芽糖漿",
   },
 ];
 
