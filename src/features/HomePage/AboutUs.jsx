@@ -19,7 +19,7 @@ const AboutUs = () => {
           </h2>
           <hr className="w-[248px] h-[1px] border-[#000000] mb-8 md:w-[432px] lg:w-[365px] lg:ml-[105px] lg:mb-[44px] xl:w-[385px] xl:ml-[169px]" />
           <p className="px-5 text-deep-brown/82 mb-8 tracking-[0.64px] md:px-15 lg:px-0 lg:text-start lg:tracking-[0.8px]">
-            我們專注於果糖（高果糖糖漿）、麥芽糖與轉化液糖的製造，透過嚴謹的製程管理，結合品質控管與國際認證，產品穩定供應國內眾多知名飲料、果汁與冰品品牌，致力成為食品業值得信賴、安心選用的甜味原料夥伴。
+            我們專注於果糖（高果糖糖漿）、麥芽糖與轉化液糖的製造，透過嚴謹的製程管理，結合品質控管與國際驗證，產品穩定供應國內眾多知名飲料、果汁與冰品品牌，致力成為食品業值得信賴、安心選用的甜味原料夥伴。
           </p>
           <CtaButton className="mb-8 lg:mb-0" url="/about">了解我們的理念與初心</CtaButton>
         </AnimateDiv>

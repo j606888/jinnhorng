@@ -13,7 +13,7 @@ const QUALITIES = [
     image: "/images/homepage/quality-img-2.jpg",
   },
   {
-    description: "品質認證把關",
+    description: "品質驗證把關",
     image: "/images/homepage/quality-img-3.jpg",
   },
 ];

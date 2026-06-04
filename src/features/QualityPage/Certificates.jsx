@@ -12,15 +12,15 @@ const CONTROL_DATA = [
   },
   {
     image: "/images/quality/cert2.jpg",
-    title: "HACCP 危害分析與關鍵控制點認證",
+    title: "HACCP 危害分析與關鍵控制點驗證",
   },
   {
     image: "/images/quality/cert3.jpg",
-    title: "HALAL清真認證",
+    title: "HALAL清真驗證",
   },
   {
     image: "/images/quality/cert4.jpg",
-    title: " KOSHER猶太認證",
+    title: " KOSHER猶太驗證",
   },
 ];
 
@@ -48,7 +48,7 @@ const Control = () => {
             證書與標章
             </h2>
             <p className="text-deep-brown/[0.82] tracking-[0.64px] xl:text-lg">
-            我們堅守每一道製程細節，並通過多項國際標準與專業機構的認證，為客戶打造安全、高品質、值得信賴的產品體驗。
+            我們堅守每一道製程細節，並通過多項國際標準與專業機構的驗證，為客戶打造安全、高品質、值得信賴的產品體驗。
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-9">
